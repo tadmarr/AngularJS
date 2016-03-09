@@ -5,26 +5,14 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   </head>
-  <body ng-app="myApp">
-    <div ng-controller="MyController">
-
-      {{data.theVar}}
-
+  <body ng-app="myapp">
+    <div>
+      var myapp = angular.module("myapp", []);
+        myapp.controller("MyController", function($scope, $interval){
+      });
     </div>
-    <div ng-controller="MyController2">
-
-      {{data.theVar}}
-
-    </div>
-
     <script>
-      var module = angular.module("myApp",[]);
-      var MyController = module.controller("MyController", function($scope) {
-        $scope.data = {theVar : "The first value"};
-      });
-      var MyController2 = module.controller("MyController2", function($scope){
-        $scope.data = {theVar : "The other value"};
-      });
+
     </script>
   </body>
 </html>

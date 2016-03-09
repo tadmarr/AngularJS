@@ -13,16 +13,34 @@
 	<ol>
 		<li ng-repeat="item in myData.items" ng-dblclick="myData.doClick(item, $event)">DOUBLE CLICK HERE</li>
 	</ol>
+      <div>
+        <button ng-dblclick="count = count + 1" ng-init="count=0">
+            Increment (on double click)
+        </button>
+            count: {{count}}
+      </div>
+          <div>
+            <button ng-mouseenter="count2 = count2 + 1" ng-init="count2=0">
+                Increment (when mouse enters)
+            </button>
+                count: {{count2}}
+          </div>
+          <div>
+            <button ng-mousemove="count3 = count3 + 1" ng-init="count3=0">
+                Increment (when mouse moves)
+            </button>
+                count: {{count3}}
+          </div>
   </div>
 
   <script>
     angular.module("myapp", [])
             .controller("MyController", function($scope) {
                 $scope.myData = {};
-				$scope.myData.items = [{ v: "1"}, { v: "2"}, { v: "3"}, { v: "4"}];
+				$scope.myData.items = [{ var: "One"}, { var: "Two"}, { var: "Three"}, { var: "Four"}];
 
 				$scope.myData.doClick = function(item, event) {
-					alert("clicked: " + item.v + " @ " + event.clientX + ": " + event.clientY);
+					alert("clicked: " + item.var + " @ " + event.clientX + ": " + event.clientY);
 				}
 
             } );

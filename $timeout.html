@@ -7,33 +7,23 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
 
-<body bgcolor="grey" ng-app="myapp">
+<body ng-app="myapp">
+	<div ng-controller="MyController">
 
-	<div ng-controller="HelloController">
-
-		<h2>Hello {{helloTo.title}} !</h2>
 
 	</div>
 
 
 
 	<script>
-		angular.module("myapp", [])
-		.controller("HelloController", function($scope, $timeout) {
-			$scope.helloTo = {};
-			$scope.helloTo.title = "World, AngularJS";
-			
-				$timeout(callAtTimeout, 3000);
-			
-					function callAtTimeout() {
-					console.log("Timeout occurred");
-				}
-		} );
-/*				var myapp = angular.module("myapp", []);
-				myapp.controller("MyController", function{
-				});*/
+					var myapp = angular.module("myapp", []);
+					myapp.controller("MyController", function($scope, $timeout){
+						$timeout(callAtTimeout, 300);
+					});
 
-		
+					function  callAtTimeout() {
+							console.log("Timeout occurred");
+					}
 	</script>
 
 
