@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+</head>
+
+</head>
+
+<body bgcolor="grey" ng-app="myapp">
+
+<div ng-controller="MyController" >
+    <form>
+        <select ng-model="myForm.car"
+                ng-options="obj.id as obj.name for obj in myForm.options">
+            <option value="">Please choose a car</option>
+        </select>
+    </form>
+    <form>
+        <input type="text" name="firstName" ng-model="myForm.firstName"> First name <br/>
+        <input type="text" name="lastName"  ng-model="myForm.lastName"> Last name <br/>
+    </form>
+
+    <div>
+        {{myForm.firstName}} {{myForm.lastName}}
+    </div>
+</div>
+
+<script>
+    angular.module("myapp", [])
+            .controller("MyController", function($scope) {
+                $scope.myForm = {};
+                $scope.myForm.firstName = "Tadmar";
+                $scope.myForm.lastName  = "Dixon";
+            } );
+</script>
+
+</body>
+</html>

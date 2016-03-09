@@ -1,0 +1,91 @@
+Model
+View
+Controller
+
+Interpolation Directive
+ng-bind Directive
+
+Conditional Rendering
+ng-show & ng-hide Directives
+ng-switch-when
+ng-if
+ng-include (boolean)
+
+ng-repeat Directive
+
+collection of items =[{var1:val1},{var2:val2},{var3:val3}];
+javaScriptObject = { var1 : "val1", var2 : "val3", var3 : "val3"};
+
+$index
+$first
+$middle
+$last
+
+filter: itemFilter
+filter formats: date, currency, number, lowercase, uppercase, json
+Filter	Description
+date	Formats the variable as a date according to the given date format
+currency	Formats the variable as a number with a currency symbol
+number	Formats the variable as a number
+lowercase	Converts the variable to lowercase
+uppercase	Converts the variable to uppercase
+json	Converts the variable to a JSON string
+limitTo	Limits the array to the given size, beginning from some index in the array. The limitTo filter also works on strings.
+filter	A general purpose filter.
+orderBy	Sorts the array based on provided criteria.
+
+filterArray()
+
+$scope functions
+
+Event Handlers
+
+ng-click
+ng-dbl-click
+ng-mousedown
+ng-mouseup
+ng-mouseenter
+ng-mouseleave
+ng-mousemove
+ng-mouseover
+ng-keydown
+ng-keyup
+ng-keypress
+ng-change
+
+$watch() 	created by $scope.$watch()
+$digest()	triggers data bindning update
+$apply()	integrating angular with other code
+
+AngularJS AJAX
+config parameter is a JavaScript object which can contain these properties:
+method
+url
+params
+headers
+timeout
+cache
+transformRequest
+transformResponse
+
+The Promise Object has two functions
+sucess()
+error()
+Parameters: data, status, headers, config
+
+
+
+
+AngularJS Tutorial
+AngularJS Views And Directives
+AngularJS $scope Hierarchy
+AngularJS Events
+AngularJS $watch() , $digest() and $apply()
+AngularJS AJAX
+AngularJS Forms
+AngularJS $timeout and $interval
+AngularJS Custom Directives
+AngularJS Modularization & Dependency Injection
+AngularJS Routes
+AngularJS Internationalization
+AngularJS Critique

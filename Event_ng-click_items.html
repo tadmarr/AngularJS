@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+</head>
+
+<body bgcolor="grey" ng-app="myapp">
+
+  <div ng-controller="MyController">
+	<ul>
+		<li ng-repeat="item in myData.items" ng-click="myData.doClick(item, $event)">CLICK HERE</li>
+	</ul>
+  </div>
+
+  <script>
+    angular.module("myapp", [])
+            .controller("MyController", function($scope) {
+                $scope.myData = {};
+				$scope.myData.items = [{ v: "1"}, { v: "2"}, { v: "3"}];
+				
+				$scope.myData.doClick = function(item, event) {
+					alert("clicked: " + item.v + " @ " + event.clientX + ": " + event.clientY);
+				}
+				
+            } );
+  </script>
+
+</body>
+</html>

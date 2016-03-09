@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+</head>
+<body ng-app="myapp">
+	<div ng-controller="MyController">
+		<div ng-switch on="myData.switch">
+			<div ng-switch-when="1">Shown when switch is 1</div>
+			<div ng-switch-when="2">Shown when switch is 2</div>
+			<div ng-switch-default>Shown when switch is anything else than 1 and 2</div>
+		</div>
+	</div>
+	<script>
+		angular.module("myapp",[])
+		.controller("MyController", function ($scope) {
+		$scope.myData = {};
+		$scope.myData.switch = 1;
+		});
+	</script>
+
+</body>
+</html>

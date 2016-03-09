@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>angular2</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+	</head>
+	
+<body bgcolor="green">
+	<div ng-controller="AppController">
+		<input type="text" ng-model="stockSymbol" />
+		<pre>{{result[0]}}</pre>
+		<button ng-click='lookup()'>Lookup</button>
+	</div>
+<br/>
+<input type="text" ng-model="myModel" value={{myModel}}" />
+
+	<script>
+		angular.module('app',[]);
+			
+			function AppController($scope, $ resource) {
+				$scope.lookup = function() {
+					$scope.result = $resource(
+						'https://finance.google.com/finance/info',
+						{
+							client:'ig',
+							callback:'JSON_CALLBACK'
+						},
+							{
+								get: {
+									method:'JSONP',
+									params:{q: $scope.stockSymbol},
+								isArray: true
+								}
+							}
+						).get();
+				}
+			}
+	</script>
+
+</body>
+</html>

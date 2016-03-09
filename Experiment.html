@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<meta charset="utf-8"/>
+	<title>Tadmar&#174 </title>
+	<meta name="author" content="Tadmar Dixon"/>
+</head>
+
+<body class="container" ng-app="myApp">
+
+<div>
+	<header>
+		<h1>
+			Tadmar &#174
+		</h1>
+	</header>
+</div>
+	<h12>More than meets the eye!</h12>
+<br/>
+<br/>
+
+
+<div ng-controller="MyController">
+	<form>
+
+	<div class="form-group">
+			<input class="form-control" type="text" id="name" name="myName" ng-model="myForm.myName"
+					ng-minlength="5" ng-maxlength="12" required>
+				<label for="name">Name</label>
+			<input class="form-control" type="text" name="phoneNumber" ng-model="myForm.phoneNumber" required>
+				<label for="tel">Telephone number</label>
+			<input class="form-control" type="text" name="myEmail" ng-model="myForm.myEmail" required>
+				<label for="e-mail">e-mail</label>
+			<input class="form-control" type="text" name="myDetails" ng-model="myForm.myDetails" required>
+				<label for="details">My details</label>
+	</div>
+	<div>
+			<input class="btn btn-default" type="submit" value="SEND"/>
+			<input class="btn btn-default" type="reset" value="CLEAR"/>
+			<button class="btn btn-default" ng-click="myForm.sendToTadmar()">Send to Tadmar</button>
+	</div>
+	<div>
+		<input type="checkbox" ng-model="myForm.wantNewsletter"
+							ng-true-value="yes" ng-false-value="no" >
+			<label>Add me to your mailing list</label>
+		<input type="radio" ng-model="myForm.whichNewsletter" value="weeklyNews">
+			<label>Weekly mail</label>
+		<input type="radio" ng-model="myForm.whichNewsletter" value="monthlyNews">
+			<label>Monthly mail</label>
+	</div>
+			
+			<div>
+			<div>{{myForm.myName}}</div>
+			<div>{{myForm.phoneNumber}}</div>
+			<div>{{myForm.myEmail}}</div><br/>
+			<div>{{myForm.myDetails}}</div>
+			</div>
+
+	</form>
+</div>
+<br/>
+
+<footer>
+	<h6>Copyright&#169 2016 Tadmar&#174 </h6>
+</footer>
+
+<script>
+	angular.module("myApp", [])
+		.controller("MyController", function($scope) {
+			$scope.myForm = {};
+			$scope.myForm.myName = "Tadmar";
+			$scope.myForm.phoneNumber = "305-123-4567";
+			$scope.myForm.myEmail = "me@domain.com";
+			$scope.myForm.myDetails = "What I need";
+
+			$scope.myForm.sendToTadmar = function(item, event) {}
+			
+		} );
+
+</script>
+	<!--
+	<label>Your name: </label><br/>
+	<input id="name" type="name" placeholer="John Doe" required/>
+
+	<label for="tel">Tel: </label><br/>
+	<input id="tel" type="tel" placeholder="xxx-xxx-xxxx"
+	pattern="[0-9]{10}-[0-9]{4}-[0-9]{4}" required/><br/>
+
+	<label for="email">e-mail: </label><br/>
+	<input id="email" type="email" name="email" placeholder="name@domain.com" required/><br/>
+
+	<label for="textarea">Your Event: </label>
+	<br/><textarea></textarea><br/>
+	
+	<canvas class='canvas1' width='100%' height='3in'>
+	For best results using this canvas element, please install the latest updates for your browser.
+	</canvas>
+	-->
+</body>
+</html>
