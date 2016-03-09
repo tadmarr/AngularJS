@@ -2,27 +2,29 @@
 <html lang="en">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 
-<body bgcolor="grey" ng-app="myapp">
+<body ng-app="myapp">
 
   <div ng-controller="MyController">
-	<ul>
-		<li ng-repeat="item in myData.items" ng-click="myData.doClick(item, $event)">CLICK HERE</li>
-	</ul>
+	<ol>
+		<li ng-repeat="item in myData.items" ng-dblclick="myData.doClick(item, $event)">DOUBLE CLICK HERE</li>
+	</ol>
   </div>
 
   <script>
     angular.module("myapp", [])
             .controller("MyController", function($scope) {
                 $scope.myData = {};
-				$scope.myData.items = [{ v: "1"}, { v: "2"}, { v: "3"}];
-				
+				$scope.myData.items = [{ v: "1"}, { v: "2"}, { v: "3"}, { v: "4"}];
+
 				$scope.myData.doClick = function(item, event) {
 					alert("clicked: " + item.v + " @ " + event.clientX + ": " + event.clientY);
 				}
-				
+
             } );
   </script>
 
