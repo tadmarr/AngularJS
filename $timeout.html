@@ -8,7 +8,7 @@
 </head>
 
 <body ng-app="myapp">
-	<div ng-controller="MyController">
+	<div ng-controller="DIController">
 
 
 	</div>
@@ -16,14 +16,16 @@
 
 
 	<script>
-					var myapp = angular.module("myapp", []);
-					myapp.controller("MyController", function($scope, $timeout){
-						$timeout(callAtTimeout, 300);
-					});
+			var myapp = angular.module("myapp", []);
 
-					function  callAtTimeout() {
-							console.log("Timeout occurred");
-					}
+			myapp.controller("DIController", function($scope, $timeout){
+
+			    $scope.callAtTimeout = function() {
+			        console.log("$scope.callAtTimeout - Timeout occurred");
+			    }
+
+			    $timeout( function(){ $scope.callAtTimeout(); }, 3000);
+			});
 	</script>
 
 
