@@ -5,7 +5,7 @@
 </head>
 <body ng-app="myapp">
 	<div ng-controller="MyController">
-		<span ng-bind="myData.textf()"></span>
+		<span ng-bind-html="myData.textf()"></span>
 	</div>
 	<script>
 		angular.module("myapp", [])

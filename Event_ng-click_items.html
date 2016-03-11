@@ -14,13 +14,13 @@
 		<li ng-repeat="item in myData.items" ng-dblclick="myData.doClick(item, $event)">DOUBLE CLICK HERE</li>
 	</ol>
       <div>
-        <button ng-dblclick="count = count + 1" ng-init="count=0">
-            Increment (on double click)
+        <button ng-mouseover="count = count + 1" ng-init="count=0">
+            Increment (on mouse over)
         </button>
             count: {{count}}
       </div>
           <div>
-            <button ng-mouseenter="count2 = count2 + 1" ng-init="count2=0">
+            <button ng-mousedown ="count2 = count2 + 1" ng-init="count2=0">
                 Increment (when mouse enters)
             </button>
                 count: {{count2}}

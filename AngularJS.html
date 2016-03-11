@@ -3,33 +3,30 @@
 <head>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://gist.github.com/tadmarr/4b2a3060050f72e94b1d.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
-
-<body ng-app="myapp">
-
-<div ng-controller="MyController">
-    <form>
-		<div class="form-group">
-			<input class="form-control" type="text" name="firstName" ng-model="myForm.firstName"><label for="name">First name</label>
-			<input class="form-control" type="text" name="lastName"  ng-model="myForm.lastName"><label for="name">Last name</label>
+<body class="container" ng-app="myapp"><br/>
+		<div class="form-group" ng-controller="MyController">
+	    <form>
+				<div>
+					<input class="form-control" type="text" name="firstName" ng-model="myForm.firstName">
+						<label for="name">First name</label>
+					<input class="form-control" type="text" name="lastName"  ng-model="myForm.lastName">
+						<label for="name">Last name</label>
+				</div>
+			</form>
+		    <div>
+		        {{myForm.firstName}} {{myForm.lastName}}
+		    </div>
 		</div>
-	</form>
-
-    <div>
-        {{myForm.firstName}} {{myForm.lastName}}
-    </div>
-</div>
-
-<script>
-    angular.module("myapp", [])
-            .controller("MyController", function($scope) {
-                $scope.myForm = {};
-                $scope.myForm.firstName = "Jakob";
-                $scope.myForm.lastName  = "Jenkov";
-            } );
-</script>
+	<script>
+	    angular.module("myapp", [])
+	            .controller("MyController", function($scope) {
+	                $scope.myForm = {};
+	                $scope.myForm.firstName = "Angella";
+	                $scope.myForm.lastName  = "Blanket";
+	            } );
+	</script>
 
 </body>
 </html>
