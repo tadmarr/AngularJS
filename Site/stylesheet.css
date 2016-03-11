@@ -1,0 +1,44 @@
+body {
+	font-family: 'Lucida Sans Unicode', Arial;
+	color: white;
+	background-color: black;
+}
+header {
+	font-size: 40pt;
+	text-align: center;
+	letter-spacing: 10px;
+	background-color: rgba(100, 100, 100, .5);
+}
+a {
+	text-decoration: none;
+	list-style: none;
+	color: white;
+	font-size: 18pt;
+	background-color: rgba(10, 10, 10, .5)
+	padding: 0px 0px;
+}
+a:hover {
+	background-color: white;
+	color: black;
+	transition: background-color 100ms linear 0ms,
+				color 200ms linear 100ms; // -property, -duration, -timing-function, -delay
+}
+.navigation ,nav ul {
+	display: flex;
+	display-style: none;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	border-top:2px white solid;
+	border-bottom:2px white solid;
+}
+nav ul li {
+	background-color: rgba (10%, 10%, 10%, .5);
+}
+nav {
+	background-color: grey;
+}
+canvas {
+	width: 70%;
+	border: 5px white dotted;
+	background-color: #1be;
+}
