@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <link rel="stylesheet" href="stylesheet.css"/>
+
+  <meta charset="utf-8"/>
+  <title>Website Designer&#174</title>
+  <meta name="author" content="Tadmar Dixon"/>
+</head>
+<body ng-controller="MyController">
+<div><header>
+<h1>Website Designer&#174</h1>
+</header></div>
+<div><nav>
+<ul class="navigation">
+<a href="Home.html"><li>Home</li></a>
+<!--
+<a href="#">Projects</li></a>
+<a href="#"><li>Events</li></a>
+-->
+<a href="#"><li>About AngularJS</li></a>
+<a class="active" href="Contact.html"><li>Contact</li></a>
+</ul>
+</nav></div>
+
+<div>{{mySite.myPage}}</div>
+
+<footer>
+  <h6>Copyright &#169 2015 Website Designer &#174</h6>
+</footer>
+
+<script>
+  angular.module("myapp",[])
+  .controller("MyController", function($scope){
+    $scope.mySite = {};
+    $scope.mySite.myPage = "PAGES";
+  });
+</script>
+
+</body>
+</html>
