@@ -1,31 +1,33 @@
 body {
-	font-family: 'Lucida Sans Unicode', Arial;
+	font-family: sans-serif, 'Lucida Sans Unicode', Arial;
 	color: white;
-	background-color: black;
+	background-color: #222;
+	margin: 0px;
 }
 header {
-	font-size: 40pt;
+	font-size: 36px;
 	text-align: center;
-	letter-spacing: 10px;
-	background-color: rgba(100, 100, 100, .5);
+	letter-spacing: 7px;
+	background-color: rgba(80, 80, 80, .5);
+
 }
 a {
+	padding: 0px 10px;
 	text-decoration: none;
 	list-style: none;
 	color: white;
-	font-size: 18pt;
-	background-color: rgba(10, 10, 10, .5)
-	padding: 0px 0px;
+	font-size: 10pt;
+	background-color: rgba(80, 80, 80, .1);
 }
 a:hover {
+	text-decoration: none;
 	background-color: white;
 	color: black;
-	transition: background-color 100ms linear 0ms,
-				color 200ms linear 100ms; // -property, -duration, -timing-function, -delay
+	transition: background-color 400ms ease-in 0ms,
+				color 400ms linear 0ms; // -property, -duration, -timing-function, -delay
 }
 .navigation ,nav ul {
 	display: flex;
-	display-style: none;
 	justify-content: space-around;
 	flex-flow: row wrap;
 	border-top:2px white solid;
@@ -37,8 +39,17 @@ nav ul li {
 nav {
 	background-color: grey;
 }
-canvas {
-	width: 70%;
-	border: 5px white dotted;
-	background-color: #1be;
+article {
+	margin: 20px;
+	padding: 10px;
+	background-color: #000;
+}
+footer {
+	margin-left: 30px;
+	position: fixed;
+	bottom: 0;
+}
+.contact {
+	margin: 1in;
+	padding: 1in;
 }

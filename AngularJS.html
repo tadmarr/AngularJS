@@ -5,28 +5,36 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
-<body class="container" ng-app="myapp"><br/>
-		<div class="form-group" ng-controller="MyController">
-	    <form>
-				<div>
-					<input class="form-control" type="text" name="firstName" ng-model="myForm.firstName">
-						<label for="name">First name</label>
-					<input class="form-control" type="text" name="lastName"  ng-model="myForm.lastName">
-						<label for="name">Last name</label>
-				</div>
-			</form>
-		    <div>
-		        {{myForm.firstName}} {{myForm.lastName}}
-		    </div>
-		</div>
-	<script>
-	    angular.module("myapp", [])
-	            .controller("MyController", function($scope) {
-	                $scope.myForm = {};
-	                $scope.myForm.firstName = "Angella";
-	                $scope.myForm.lastName  = "Blanket";
-	            } );
-	</script>
+<body class="container" ng-app="sampleApp"><br/>
+	<a href="#/route1">Route 1</a><br/>
+<a href="#/route2">Route 2</a><br/>
+
+
+<div ng-view></div>
+
+<script>
+    var module = angular.module("sampleApp", ['ngRoute']);
+
+    module.config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+                when('/route1', {
+                    templateUrl: 'Experiment.html',
+                    controller: 'RouteController'
+                }).
+                when('/route2', {
+                    templateUrl: 'angular-route-template-2.jsp',
+                    controller: 'RouteController'
+                }).
+                otherwise({
+                    redirectTo: '/'
+                });
+        }]);
+
+    module.controller("RouteController", function($scope) {
+
+    })
+</script>
 
 </body>
 </html>
