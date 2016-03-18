@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="employeeApp">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+<!--    <script src="js/script.js"></script>-->
+</head>
+<body ng-controller="employeeController">
+
+    <form>
+    		<input type="text" ng-model="employee.firstname"/>
+    			<label>Employee First Name</label>
+
+    	<div>
+			<input class="btn btn-default" type="submit" value="Add"/>
+			<input class="btn btn-default" type="reset" value="Edit"/>
+			<button class="btn btn-default" ng-click="#()">Delete</button>
+    	</div>
+
+		<div>
+			<div>{{employee.firstname}}</div>
+		</div>
+    </form>
+
+<script>
+        var employeeInfo =     {
+                                   number: 1 ,
+                                   ,firstname: 'John'
+                                   ,lastname: 'Doe'
+                                   ,middlename: 'Z'
+                                   ,age: 26
+                                   ,salary: 55000
+                               };
+
+
+    var app = angular.module("employeeApp", [])
+
+        app.controller("employeeController", function(){
+            this.employee = employeeInfo;
+
+        });
+</script>
+</body>
+<html>
