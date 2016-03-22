@@ -1,0 +1,25 @@
+<form>
+  DELETE<br>
+         <input type="number" ng-model="employeeCtrl.employee.number"/>
+           <label>Employee Number</label><br>
+         <input type="text" ng-model="employeeCtrl.employee.firstname"/>
+           <label>Employee First Name</label><br>
+         <input type="text" ng-model="employeeCtrl.employee.lastname"/>
+           <label>Employee Last Name</label><br>
+         <input type="text" ng-model="employeeCtrl.employee.middlename"/>
+           <label type="text">Employee Middle Name</label><br>
+         <input type="number" ng-model="employeeCtrl.employee.age"/>
+           <label>Employee Age</label><br>
+
+         <select ng-model="employeeCtrl.employee.designation">
+               <option value="Senior Manager">Senior Manager</option>
+               <option value="Assistant Manager">Assistant Manager</option>
+               <option value="Lead">Lead</option>
+               <option value="Senior Consultant">Senior Consultant</option>
+               <option value="Consultant">Consultant</option>
+         </select>
+           <label type="text">Employee Designation</label><br>
+
+         <input type="number" ng-model="employeeCtrl.employee.salary"/>
+           <label>Salary</label><br>
+     </form>

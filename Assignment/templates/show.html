@@ -1,0 +1,12 @@
+<div>SHOW<br/>
+<div ng-repeat="person in employeeCtrl.employee">
+  <h7><label>Number:</label>{{person.number}}
+  <label>Name:</label>{{" " + person.lastname + ", "}}{{person.firstname}} {{person.middlename}}
+  <label>Age:</label>{{person.age|number}}
+  <label>Position:</label>{{" " + person.designation}}
+  <em><label>Salary:</label>{{person.salary|currency}}</em></h7>
+</div>
+</div>
+<div>
+
+</div>
