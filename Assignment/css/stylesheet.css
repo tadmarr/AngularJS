@@ -1,8 +1,14 @@
 body {
     color: grey;
     background-color: black;
+    margin: 5em;
 }
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+tr, td, th {
+  border: 1px solid grey;
+}
+td, th {
+  padding: 1px 16px;
 }

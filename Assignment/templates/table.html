@@ -1,0 +1,19 @@
+<div ng-controller="employeeController as employeeCtrl">
+<table border="1">
+  <caption>Employee Database Management</caption>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Position</th>
+      <th>Salary</th>
+    </tr>
+    <tr ng-repeat="person in employeeCtrl.employee">
+      <td>{{person.number}}</td>
+      <td>{{person.lastname + ", "}}{{person.firstname}} {{person.middlename}}</td>
+      <td>{{person.age|number}}</td>
+      <td>{{person.designation}}</td>
+      <td>{{person.salary|currency}}</td>
+    </tr>
+</table>
+</div>
