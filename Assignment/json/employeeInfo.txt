@@ -6,7 +6,7 @@ var employeeInfo = [
                         "middlename": "Anthony",
                         "age": 33,
                         "designation": "Senior Manager",
-                        "salary": 65500,
+                        "salary": 65500
                       },
                       {
                         "number": 2,
@@ -15,7 +15,7 @@ var employeeInfo = [
                         "middlename": "G",
                         "age": 37,
                         "designation": "Lead",
-                        "salary": 55100,
+                        "salary": 55100
                       },
                       {
                         "number": 3,
@@ -24,7 +24,7 @@ var employeeInfo = [
                         "middlename": "Micro",
                         "age": 30,
                         "designation": "Assistant Manager",
-                        "salary": 62400,
+                        "salary": 62400
                       },
                       {
                         "number": 4,
@@ -33,6 +33,6 @@ var employeeInfo = [
                         "middlename": "A",
                         "age": 27,
                         "designation": "Consultant",
-                        "salary": 64000,
-                      },
+                        "salary": 64000
+                      }
                   ]

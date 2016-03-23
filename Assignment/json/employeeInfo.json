@@ -1,38 +1,38 @@
-var employeeInfo = [
-                      {
-                        "number": 1,
-                        "firstname": "John",
-                        "lastname": "Waite",
-                        "middlename": "Anthony",
-                        "age": 33,
-                        "designation": "Senior Manager",
-                        "salary": 65500,
-                      },
-                      {
-                        "number": 2,
-                        "firstname": "Aaron",
-                        "lastname": "Cranberry",
-                        "middlename": "G",
-                        "age": 37,
-                        "designation": "Lead",
-                        "salary": 55100,
-                      },
-                      {
-                        "number": 3,
-                        "firstname": "Tyrone",
-                        "lastname": "Gates",
-                        "middlename": "Micro",
-                        "age": 30,
-                        "designation": "Assistant Manager",
-                        "salary": 62400,
-                      },
-                      {
-                        "number": 4,
-                        "firstname": "Ellie",
-                        "lastname": "Candle",
-                        "middlename": "A",
-                        "age": 27,
-                        "designation": "Consultant",
-                        "salary": 64000,
-                      },
-                  ]
+[
+    {
+    "number": 1,
+    "firstname": "John",
+    "lastname": "Waite",
+    "middlename": "Anthony",
+    "age": 33,
+    "designation": "Senior Manager",
+    "salary": 65500
+    },
+    {
+    "number": 2,
+    "firstname": "Aaron",
+    "lastname": "Cranberry",
+    "middlename": "G",
+    "age": 37,
+    "designation": "Lead",
+    "salary": 55100
+    },
+    {
+    "number": 3,
+    "firstname": "Tyrone",
+    "lastname": "Gates",
+    "middlename": "Micro",
+    "age": 30,
+    "designation": "Assistant Manager",
+    "salary": 62400
+    },
+    {
+    "number": 4,
+    "firstname": "Ellie",
+    "lastname": "Candle",
+    "middlename": "A",
+    "age": 27,
+    "designation": "Consultant",
+    "salary": 64000
+    }
+]

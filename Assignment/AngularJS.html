@@ -10,7 +10,7 @@
 
 <a href='http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71'>Database</a><br/>
 
-<a href="#/route1/abcd">Route 1 + param</a><br/>
+<a href='http://localhost:8080/json/employeeInfo.json'>Route 1 + param</a><br/>
 <a href="#/route2/1234">Route 2 + param</a><br/>
 
 
@@ -23,7 +23,7 @@
         function($routeProvider) {
             $routeProvider.
                     when('/route1/:param', {
-                        templateUrl: 'angular-route-template-1.jsp',
+                        templateUrl: 'http://localhost:8080/json/employeeInfo.json',
                         controller: 'RouteController'
                     }).
                     when('/route2/:param', {

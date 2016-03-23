@@ -1,15 +1,12 @@
 (function(){
+    angular.module('employeeApp')
+      .controller('employeeController', employeeCtrl);
 
-angular.module('employeeApp', [])
-  .controller('employeeController', employeeCtrl)
+       function employeeCtrl(){
+          this.employee = function(){
 
-
-   function employeeCtrl(){
-      this.employee = employeeInfo;
-
-};
-
-
+          }
+        };
 
 
 })();
