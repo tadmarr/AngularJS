@@ -4,7 +4,8 @@
         return{
             restrict: 'E',
             templateUrl:'templates/employee-table.html',
-            controllerAs: 'employeeCtrl'
+            controller: 'dataController',
+            controllerAs: 'dataCtrl'
         };
     })
 })();
