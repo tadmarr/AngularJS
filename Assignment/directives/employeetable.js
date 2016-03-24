@@ -4,6 +4,12 @@
         return{
             restrict: 'E',
             templateUrl:'templates/employee-table.html'
+
         }
     })
 })();
+/*
+controller: function employeeCtrl(){
+},
+controllerAs: 'employeeCtrl'
+*/
