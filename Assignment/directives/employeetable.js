@@ -3,13 +3,13 @@
     .directive('employeeTable', function(){
         return{
             restrict: 'E',
-            templateUrl:'templates/employee-table.html'
-
-        }
+            templateUrl:'templates/employee-table.html',
+            controllerAs: 'employeeCtrl'
+        };
     })
 })();
 /*
-controller: function employeeCtrl(){
+controller: function (){
 },
 controllerAs: 'employeeCtrl'
 */

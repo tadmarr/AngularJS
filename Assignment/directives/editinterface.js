@@ -3,7 +3,8 @@
     .directive('editInterface', function(){
         return{
             restrict: 'E',
-            templateUrl:'templates/edit-interface.html'
-        }
+            templateUrl:'templates/edit-interface.html',
+            controllerAs: 'employeeCtrl'
+        };
     })
 })();
