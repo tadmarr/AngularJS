@@ -7,21 +7,17 @@
                   console.log('WORKED');
 
                   //You have to create a promise that some data is going to be retrieved
-                  var responsePromise = $http.get("http://localhost:8080/json/employeeInfo.json");
-                  responsePromise.success(function(data, status, headers, config){
-                     $scope.myData.forServer = data.title;
-                  });
-                  responsePromise.error(function(data, status, headers, config){
+                  $http.get("http://localhost:8080/json/employeeInfo.json")
+                  .success(function(data, status, headers, config){
+                     $scope.employeeInfo = data;
+                     console.log(data);
+                  })
+                  .error(function(data, status, headers, config){
                       alert("AJAX failed!");
                   });
                     //Store the data in an object inside the controller
               }
-          $http({
-              method: 'GET',
-              url: 'http://localhost:8080/json/employeeInfo.json'}).success(function(data) {
-                  employeeInfo = data;
-              });
-      });
+});
 })();
 /*
 here are two links to database and json file
@@ -33,7 +29,7 @@ $http.post(url, data, config)
 $http.put(url, data, config)
 $http.delete(url, config)
 $http.head(url, config)
-
+CRUD
 <div ng-controller="MyController" >
   <button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
   <br/>
@@ -57,4 +53,10 @@ $http.head(url, config)
           }
       } );
 </script>
+$http({
+    method: 'GET',
+    url: 'http://localhost:8080/json/employeeInfo.json'}).success(function(data) {
+        employeeInfo = data;
+    });
+
 */
