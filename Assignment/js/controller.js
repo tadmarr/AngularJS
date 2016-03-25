@@ -3,8 +3,6 @@
       .controller('employeeController', employeeCtrl);
        function employeeCtrl(){
           this.employee = function(){
-
           }
         };
-        
 })();
