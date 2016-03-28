@@ -15,6 +15,7 @@
                   });
                     //Store the data in an object inside the controller
               }
+              $scope.$watch(employeeInfo());
 });
 })();
 /*

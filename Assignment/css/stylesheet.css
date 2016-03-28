@@ -12,3 +12,9 @@ tr, td, th {
 td, th {
   padding: 1px 16px;
 }
+table {
+  position: static;
+  top: 0;
+  table-layout: auto;
+  width: 100%;
+}
