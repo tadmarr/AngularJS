@@ -9,17 +9,15 @@
 
 	<div ng-controller="myController">
 		{{data.time}}
-
-		<br/>
+<br/>
 		<button ng-click="updateTime()">update time - ng-click</button>
 		<button id="updateTimeButton"  >update time</button>
 	</div>
 
-
 	<script>
 		var module       = angular.module("myapp", []);
 		var myController1 = module.controller("myController", function($scope) {
-	 
+
 			$scope.data = { time : new Date() };
 
 			$scope.updateTime = function() {
@@ -31,17 +29,16 @@
 				console.log("update time clicked");
 				$scope.data.time = new Date();
 				$scope.$digest();
-				
+
 	/* ALTERNATIVE
 	document.getElementById("updateTimeButton")
         .addEventListener('click', function() {
     $scope.$apply(function() {
         console.log("update time clicked");
         $scope.data.time = new Date();*/
-				
+
 			});
 		});
 	</script>
-
 </body>
 </html>

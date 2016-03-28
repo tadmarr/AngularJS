@@ -4,7 +4,8 @@
         return{
             restrict: 'E',
             templateUrl:'templates/edit-interface.html',
-            controllerAs: 'employeeCtrl'
+            controller: 'dataController',
+            controllerAs: 'dataCtrl'
         };
     })
 })();

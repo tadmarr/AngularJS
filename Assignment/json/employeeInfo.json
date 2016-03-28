@@ -4,7 +4,7 @@
     "firstname": "John",
     "lastname": "Waite",
     "middlename": "Anthony",
-    "age": 33,
+    "age": 34,
     "designation": "Senior Manager",
     "salary": 65500
     },
@@ -34,5 +34,59 @@
     "age": 27,
     "designation": "Consultant",
     "salary": 64000
+    },
+    {
+    "number": 5,
+    "firstname": "Vivian",
+    "lastname": "Zoo",
+    "middlename": "M",
+    "age": 39,
+    "designation": "Senior Manager",
+    "salary": 69700
+    },
+    {
+    "number": 7,
+    "firstname": "John",
+    "lastname": "Waite",
+    "middlename": "Anthony",
+    "age": 65,
+    "designation": "Senior Manager",
+    "salary": 75000
+    },
+    {
+    "number": 6,
+    "firstname": "Aaron",
+    "lastname": "Cranberry",
+    "middlename": "G",
+    "age": 47,
+    "designation": "Lead",
+    "salary": 55100
+    },
+    {
+    "number": 9,
+    "firstname": "Tyrone",
+    "lastname": "Gates",
+    "middlename": "Micro",
+    "age": 55,
+    "designation": "Assistant Manager",
+    "salary": 70000
+    },
+    {
+    "number": 10,
+    "firstname": "Ellie",
+    "lastname": "Candle",
+    "middlename": "A",
+    "age": 19,
+    "designation": "Consultant",
+    "salary": 64000
+    },
+    {
+    "number": 11,
+    "firstname": "Vivian",
+    "lastname": "Zoo",
+    "middlename": "M",
+    "age": 25,
+    "designation": "Senior Manager",
+    "salary": 69700
     }
 ]

@@ -7,16 +7,11 @@
   </head>
   <body ng-app="myApp">
     <div ng-controller="MyController">
-
       {{data.theVar}}
-
     </div>
     <div ng-controller="MyController2">
-
       {{data.theVar}}
-
     </div>
-
     <script>
       var module = angular.module("myApp",[]);
       var MyController = module.controller("MyController", function($scope) {

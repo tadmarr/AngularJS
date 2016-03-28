@@ -3,12 +3,10 @@
       .controller('dataController', function($scope,$http) {
           var employeeInfo = $scope.getEmployeeInfo = function(){
                   //Whenever you click this is going to be triggered
-
                   //You have to create a promise that some data is going to be retrieved
                   $http.get("http://localhost:8080/json/employeeInfo.json")
                   .success(function(data, status, headers, config){
                      $scope.employeeInfo = data;
-
                   })
                   .error(function(data, status, headers, config){
                       alert("AJAX failed!");
@@ -17,6 +15,7 @@
               }
               $scope.$watch(employeeInfo());
 });
+
 })();
 /*
 here are two links to database and json file
@@ -40,9 +39,7 @@ CRUD
       .controller("MyController", function($scope, $http) {
           $scope.myData = {};
           $scope.myData.doClick = function(item, event) {
-
               var responsePromise = $http.get("/angularjs-examples/json-test-data.jsp");
-
               responsePromise.success(function(data, status, headers, config) {
                   $scope.myData.fromServer = data.title;
               });

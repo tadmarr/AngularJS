@@ -9,8 +9,3 @@
         };
     })
 })();
-/*
-controller: function (){
-},
-controllerAs: 'employeeCtrl'
-*/

@@ -4,21 +4,17 @@
 <head>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
-
 <body ng-app="myapp">
-
 <div ng-controller="MyController">
     <form>
         <select ng-model="myNotes.note"
                 ng-options="obj.id as obj.note for obj in myNotes.options">
         </select>
     </form>
-
     <div>
-        <h4>{{myNotes.note}} Major Scale:</h4>
+        <span>------------>>{{myNotes.note}} Major Scale:</span>
 				<h5></h5>
     </div>
 </div>
@@ -27,21 +23,20 @@
 	        .controller("MyController", function($scope) {
 	            $scope.myNotes = {};
 	            $scope.myNotes.note  = "C";
-
-	            $scope.myNotes.options = [
-								{ id : "A", note: "A" }
-								,{ id : "Bb", note: "Bb"}
-								,{ id : "B", note: "B" }
-								,{ id : "C", note: "C"}
-								,{ id : "Db", note: "Db"}
-								,{ id : "D", note: "D"}
-								,{ id : "Eb", note: "Eb"}
-								,{ id : "E", note: "E"}
-								,{ id : "F", note: "F" }
-								,{ id : "Gb", note: "Gb"}
-								,{ id : "G", note: "G" }
-								,{ id : "Ab", note: "Ab"}
-								];
+	            $scope.myNotes.options = 	[
+											{ id : "A", note: "A" }
+											,{ id : "Bb", note: "Bb"}
+											,{ id : "B", note: "B" }
+											,{ id : "C", note: "C"}
+											,{ id : "Db", note: "Db"}
+											,{ id : "D", note: "D"}
+											,{ id : "Eb", note: "Eb"}
+											,{ id : "E", note: "E"}
+											,{ id : "F", note: "F" }
+											,{ id : "Gb", note: "Gb"}
+											,{ id : "G", note: "G" }
+											,{ id : "Ab", note: "Ab"}
+											];
 
 	        } );
 	</script>

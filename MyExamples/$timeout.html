@@ -6,28 +6,18 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
-
 <body ng-app="myapp">
 	<div ng-controller="DIController">
 
-
 	</div>
-
-
-
 	<script>
 			var myapp = angular.module("myapp", []);
-
 			myapp.controller("DIController", function($scope, $timeout){
-
 			    $scope.callAtTimeout = function() {
 			        console.log("$scope.callAtTimeout - Timeout occurred");
 			    }
-
 			    $timeout( function(){ $scope.callAtTimeout(); }, 3000);
 			});
 	</script>
-
-
 </body>
 </html>

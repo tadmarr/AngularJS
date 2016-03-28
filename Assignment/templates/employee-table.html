@@ -7,7 +7,7 @@
       <th>Position</th>
       <th>Salary</th>
     </tr>
-    <tr ng-repeat="person in employeeInfo">
+    <tr ng-repeat="person in employeeInfo | limitTo: 9| orderBy:sortField:reverse">
       <td>{{person.number}}</td>
       <td>{{person.lastname + ", "}}{{person.firstname}} {{person.middlename}}</td>
       <td>{{person.age|number}}</td>
@@ -15,3 +15,8 @@
       <td>{{person.salary|currency}}</td>
     </tr>
 </table>
+<div class="buttons">
+    <button class="btn btn-default" value="add" ng-submit=""/>ADD</button>
+    <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
+    <button class="btn btn-default">DELETE</button>
+</div>

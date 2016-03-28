@@ -3,9 +3,8 @@
 <head>
 	<title>angular2</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+</head>
 
-	</head>
-	
 <body bgcolor="green">
 	<div ng-controller="AppController">
 		<input type="text" ng-model="stockSymbol" />
@@ -17,7 +16,7 @@
 
 	<script>
 		angular.module('app',[]);
-			
+
 			function AppController($scope, $ resource) {
 				$scope.lookup = function() {
 					$scope.result = $resource(
@@ -30,7 +29,7 @@
 								get: {
 									method:'JSONP',
 									params:{q: $scope.stockSymbol},
-								isArray: true
+									isArray: true
 								}
 							}
 						).get();
