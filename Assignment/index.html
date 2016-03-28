@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="employeeApp">
+<html lang="en" ng-app="employeeApp" ng-cloak>
 <head>
     <!-- database is at http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71"-->
     <!-- Latest compiled and minified CSS -->
@@ -15,17 +15,21 @@
     <script src="directives/employeetable.js"></script>
 </head>
 
-<body ng-cloak>
+<body>
   <div id="wholepage">
     <div>
         <div id="top" class="tophalf">
           <employee-table></employee-table>
         </div>
-        <div id="bottom">
-<br><br>
 
-<br>
-        <edit-interface></edit-interface>
+        <div id="bottom">
+            <div class="buttons">
+                <button class="btn btn-default" value="add" ng-submit=""/>ADD</button>
+                <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
+                <button class="btn btn-default">DELETE</button>
+            </div>
+
+            <edit-interface></edit-interface>
 
 <!--        <div ng-controller="dataController as dataCtrl">
           {{employeeInfo}}
@@ -33,7 +37,6 @@
 -->
         </div>
     </div>
-
   </div>
 </body>
 </html>

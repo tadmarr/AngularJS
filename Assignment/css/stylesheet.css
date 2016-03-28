@@ -1,15 +1,13 @@
-body {
-    color: grey;
-    background-color: black;
-    margin: 5em;
-}
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+body {
+    color: grey;
+    background-color: black;
+    margin: 3em 5em;
+}
 tr, td, th {
   border: 1px solid #555;
-}
-td, th {
   padding: 2px 16px;
 }
 caption {
@@ -21,21 +19,23 @@ table{
     font: sans serif;
     margin-left: .5in;
     margin-right: .5in;
+    overflow-y: scroll;
 }
 #top, #bottom {
     position: fixed;
     left: .5in;
     right: .5in;
-    height: 50%;
+
 }
 #top {
     top: .5;
     background-color: #222;
-    overflow-y: scroll;
+    height: 44%;
 }
 #bottom {
     bottom: 0;
     background-color: #000;
+    height: 55%;
 }
 .buttons {
     margin: .2in .5in;
@@ -55,10 +55,12 @@ color: white;
     top:.5;
     left:.5;
     width:200px;
+    color: black;
 }
 .Binterface    {
     position:absolute;
     top:.5;
     left:3in;
     width:200px;
+    color: black;
 }
