@@ -16,24 +16,27 @@
 </head>
 
 <body ng-cloak>
+  <div id="wholepage">
     <div>
-        <div id="table">
+        <div id="top" class="tophalf">
           <employee-table></employee-table>
         </div>
-        <br><br>
+        <div id="bottom">
+<br><br>
             	<div>
           			<button class="btn btn-default" value="add" ng-submit=""/>ADD</button>
                     <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
           			<button class="btn btn-default">DELETE</button>
             	</div>
-        <br>
+<br>
         <edit-interface></edit-interface>
+
+        <div ng-controller="dataController as dataCtrl">
+          {{employeeInfo}}
+        </div>
+        </div>
+    </div>
+
   </div>
-<div ng-controller="dataController as dataCtrl">
-  {{employeeInfo}}
-</div>
-
-
-
 </body>
 </html>

@@ -13,8 +13,21 @@ td, th {
   padding: 1px 16px;
 }
 table {
-  position: static;
-  top: 0;
-  table-layout: auto;
-  width: 100%;
+  margin-left: .5in;
+  margin-right: .5in;
+}
+#top, #bottom {
+    position: fixed;
+    left: .5in;
+    right: .5in;
+    height: 50%;
+}
+#top {
+    top: .5;
+    background-color: #333;
+    overflow: scroll;
+}
+#bottom {
+    bottom: 0;
+    background-color: #000;
 }
