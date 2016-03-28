@@ -16,9 +16,7 @@ caption {
 }
 table{
     color: #ffe8e8;
-    font: sans serif;
     margin-left: .5in;
-    margin-right: .5in;
     overflow-y: scroll;
 }
 #top, #bottom {
@@ -31,11 +29,12 @@ table{
     top: .5;
     background-color: #222;
     height: 44%;
+//    border: 3px solid white;
 }
 #bottom {
     bottom: 0;
     background-color: #000;
-    height: 55%;
+    height: 56%;
 }
 .buttons {
     margin: .2in .5in;
