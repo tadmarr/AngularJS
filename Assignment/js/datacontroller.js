@@ -1,16 +1,14 @@
 (function(){
     angular.module('employeeApp')
       .controller('dataController', function($scope,$http) {
-          var employeeInfo = this;
-              $scope.Test = function(){
+          var employeeInfo = $scope.getEmployeeInfo = function(){
                   //Whenever you click this is going to be triggered
-                  console.log('WORKED');
 
                   //You have to create a promise that some data is going to be retrieved
                   $http.get("http://localhost:8080/json/employeeInfo.json")
                   .success(function(data, status, headers, config){
                      $scope.employeeInfo = data;
-                     console.log(data);
+
                   })
                   .error(function(data, status, headers, config){
                       alert("AJAX failed!");
