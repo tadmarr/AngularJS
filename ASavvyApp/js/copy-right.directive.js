@@ -1,9 +1,9 @@
 (function(){
 angular.module('savvyApp')
-.directive('copyRight', function(){
+.directive('headerNavigation', function(){
   return {
     restrict: 'E',
-    templateUrl: 'templates/copy-right.html',
+    templateUrl: 'templates/header-navigation.html',
     controller: 'SavvyController',
     controllerAs: 'savvyCtrl'
   }
