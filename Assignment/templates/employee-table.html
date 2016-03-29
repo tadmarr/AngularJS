@@ -1,3 +1,4 @@
+<div class="table-container">
 <table border="1">
   <caption>Employee Database Management</caption>
     <tr>
@@ -10,8 +11,9 @@
     <tr ng-repeat="person in employeeInfo | limitTo: 50">
       <td>{{person.number}}</td>
       <td>{{person.lastname + ", "}}{{person.firstname}} {{person.middlename}}</td>
-      <td>{{person.age|number}}</td>
+      <td>{{person.age | number}}</td>
       <td>{{person.designation}}</td>
-      <td>{{person.salary|currency}}</td>
+      <td>{{person.salary | currency}}</td>
     </tr>
 </table>
+</div>

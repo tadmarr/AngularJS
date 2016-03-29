@@ -54,15 +54,6 @@
     "salary": 75000
     },
     {
-    "number": 6,
-    "firstname": "Aaron",
-    "lastname": "Cranberry",
-    "middlename": "G",
-    "age": 47,
-    "designation": "Lead",
-    "salary": 55100
-    },
-    {
     "number": 9,
     "firstname": "Tyrone",
     "lastname": "Gates",
@@ -70,15 +61,6 @@
     "age": 55,
     "designation": "Assistant Manager",
     "salary": 70000
-    },
-    {
-    "number": 10,
-    "firstname": "Ellie",
-    "lastname": "Candle",
-    "middlename": "A",
-    "age": 19,
-    "designation": "Consultant",
-    "salary": 64000
     },
     {
     "number": 11,

@@ -6,24 +6,28 @@ body {
     background-color: black;
     margin: 3em 5em;
 }
+caption {
+   color: #ffe8e8;
+   font: sans serif;
+   letter-spacing: 1px;
+}
 tr, td, th {
   border: 1px solid #555;
   padding: 2px 16px;
 }
-caption {
-   color: #ffe8e8;
-   font: sans serif;
-}
-table{
+.table-container {
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
     color: #ffe8e8;
     margin-left: .5in;
-    overflow-y: scroll;
 }
 #top, #bottom {
     position: fixed;
     left: .5in;
     right: .5in;
-
+    overflow-y: auto;
+    overflow-x: auto;
 }
 #top {
     top: .5;
