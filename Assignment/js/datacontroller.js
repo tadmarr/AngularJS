@@ -1,7 +1,8 @@
 (function(){
     angular.module('employeeApp')
-      .controller('dataController', function($scope,$http) {
-          var employeeInfo = $scope.getEmployeeInfo = function(){
+      .controller('dataController', function($scope, employeeFactory) {
+          employeeFactory.getEmployeeInfo();
+/*          var employeeInfo = $scope.getEmployeeInfo = function(){
                   //Whenever you click this is going to be triggered
                   //You have to create a promise that some data is going to be retrieved
                   $http.get("http://localhost:8080/json/employeeInfo.json")
@@ -14,6 +15,7 @@
                     //Store the data in an object inside the controller
               }
               $scope.$watch(employeeInfo());
+*/
 });
 
 })();
