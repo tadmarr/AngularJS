@@ -3,7 +3,7 @@
     .directive('formInterface', function(){
         return{
             restrict: 'E',
-            templateUrl:'templates/form.template.html',
+            templateUrl:'templates/employeeform.template.html',
             controller: 'formController',
             controllerAs: 'formCtrl'
         };

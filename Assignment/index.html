@@ -8,17 +8,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
     <!-- <script src="bower_components/angular-1.5.2/angular.min.js"></script>-->
     <script src="js/employeeapp.module.js"></script>
-    <script src="js/table.controller.js"></script>
+    <script src="js/employeetable.controller.js"></script>
     <script src="json/employeeInfo.json"></script>
     <script src="js/employeeinfo.factory.js"></script>
-    <script src="js/form.controller.js"></script>
+    <script src="js/employeeform.controller.js"></script>
     <!-- <script src="js/employeetable.controller.js"></script> -->
-    <script src="directives/form.directive.js"></script>
-    <script src="directives/table.directive.js"></script>
+    <script src="directives/employeeform.directive.js"></script>
+    <script src="directives/employeetable.directive.js"></script>
 </head>
 
 <body>
-  <div id="wholepage">
+  <div id="page-container">
     <div>
         <div id="top" class="tophalf">
           <employee-table></employee-table>
@@ -33,10 +33,6 @@
 
             <form-interface></form-interface>
 
-<!--        <div ng-controller="dataController as dataCtrl">
-          {{employeeInfo}}
-        </div>
--->
         </div>
     </div>
   </div>

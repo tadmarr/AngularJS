@@ -3,7 +3,7 @@
     .directive('employeeTable', function(){
         return{
             restrict: 'E',
-            templateUrl:'templates/table.template.html',
+            templateUrl:'templates/employeetable.template.html',
             controller: 'tableController',
             controllerAs: 'tableCtrl'
         };
