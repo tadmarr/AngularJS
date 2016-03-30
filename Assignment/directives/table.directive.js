@@ -3,9 +3,9 @@
     .directive('employeeTable', function(){
         return{
             restrict: 'E',
-            templateUrl:'templates/employee-table.html',
-            controller: 'dataController',
-            controllerAs: 'dataCtrl'
+            templateUrl:'templates/table.template.html',
+            controller: 'tableController',
+            controllerAs: 'tableCtrl'
         };
     })
 })();

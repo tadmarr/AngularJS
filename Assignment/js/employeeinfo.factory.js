@@ -1,40 +1,30 @@
 (function(){
 angular.module('employeeApp')
-.factory('employeeFactory', function($http, $q) {
-        //declare empty object
-        var employeeFactory = {};
-        //define function
-        function getEmployeeInfo (){
-            var deferred = $q.defer();
-          $http.get("http://localhost:8080/json/employeeInfo.json")
+.factory('employeeFactory', function($http) {
+        //define dependencies
+        var employeeFactory = {},
+            couchdbRoot = "http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71",
+            employeeInfoJson = "http://localhost:8080/json/employeeInfo.json";
 
-                .success(function(data, status, headers, config){
-                    var employeeInfo = data;
-                    deferred.resolve(employeeInfo);
-                    console.log(employeeInfo);
-                })
-                .error(function(error, status, headers, config){
-                    alert("AJAX failed!");
-                    deferred.reject(error);
-                });
-                return deferred.promise;
-        }
+        //define CRUD methods
+        var getEmployeeInfo = function (){
+          return $http.get(employeeInfoJson)
+                    .success(function(response, status, headers, config){
+                    })
+                    .error(function(error, status, headers, config){
+                    });
+                }
+
+        //inject CRUD methods
         employeeFactory.getEmployeeInfo = getEmployeeInfo;
-        return employeeFactory;
 
+        //return injected object
+        return employeeFactory;
 });
 
 })();
 /*
-return logFn.apply(console, args);
-var employeeInfo = function(){
-        $http.get("http://localhost:8080/json/employeeInfo.json")
-        .success(function(data, status, headers, config){
-
-        })
-        .error(function(data, status, headers, config){
-            alert("AJAX failed!");
-        });
-
-    }
+here are two links to database and json file
+http://localhost:8080/json/employeeInfo.json
+http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71
 */

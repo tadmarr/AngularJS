@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
-<!--    <script src="bower_components/angular-1.5.2/angular.min.js"></script>-->
-    <script src="js/employeeApp.js"></script>
-    <script src="js/employeeinfo.factory.js"></script>
-    <script src="js/employeecontroller.js"></script>
-    <script src="js/datacontroller.js"></script>
+    <!-- <script src="bower_components/angular-1.5.2/angular.min.js"></script>-->
+    <script src="js/employeeapp.module.js"></script>
+    <script src="js/table.controller.js"></script>
     <script src="json/employeeInfo.json"></script>
-    <!-- <script src="directives/editinterface.js"></script> -->
-    <script src="directives/employeetable.js"></script>
-
+    <script src="js/employeeinfo.factory.js"></script>
+    <script src="js/form.controller.js"></script>
+    <!-- <script src="js/employeetable.controller.js"></script> -->
+    <script src="directives/form.directive.js"></script>
+    <script src="directives/table.directive.js"></script>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 <button class="btn btn-default">DELETE</button>
             </div>
 
-            <edit-interface></edit-interface>
+            <form-interface></form-interface>
 
 <!--        <div ng-controller="dataController as dataCtrl">
           {{employeeInfo}}
