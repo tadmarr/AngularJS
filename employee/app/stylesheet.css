@@ -1,9 +1,6 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
-.page-container{
-
-}
 body {
     color: grey;
     background-color: black;
@@ -17,6 +14,9 @@ caption {
 tr, td, th {
   border: 1px solid #555;
   padding: 2px 16px;
+}
+.page-container{
+
 }
 .table-container tr:hover{
     color: black;
@@ -40,7 +40,6 @@ tr, td, th {
     top: .5;
     background-color: #222;
     height: 44%;
-//    border: 3px solid white;
 }
 #bottom {
     bottom: 0;
