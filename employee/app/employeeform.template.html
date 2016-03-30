@@ -1,0 +1,31 @@
+  <form name="editInterface" ng-submit="" novalidate>
+
+    <div class="forminterface">
+            FORM-INTERFACE<br>
+        <div class="leftforminterface">
+            <label>Employee Number</label>
+            <input type="number" ng-model="dataCtrl.employeeInfo.number"/><br>
+            <label>Employee First Name</label>
+            <input type="text" ng-model="dataCtrl.employeeInfo.firstname"/><br>
+            <label>Employee Last Name</label>
+            <input type="text" ng-model="dataCtrl.employeeInfo.lastname"/><br>
+            <label type="text">Employee Middle Name</label>
+            <input type="text" ng-model="dataCtrl.employeeInfo.middlename"/><br>
+        </div>
+
+        <div class="rightforminterface">
+            <label>Employee Age</label>
+            <input type="number" ng-model="dataCtrl.employeeInfo.age"/><br>
+            <label type="text">Employee Designation</label>
+               <select ng-placeholder="Senior Manager" ng-model="dataCtrl.employeeInfo.designation"><br>
+                     <option value="Senior Manager">Senior Manager</option>
+                     <option value="Assistant Manager">Assistant Manager</option>
+                     <option value="Lead">Lead</option>
+                     <option value="Senior Consultant">Senior Consultant</option>
+                     <option value="Consultant">Consultant</option>
+               </select><br>
+            <label>Salary</label>
+            <input type="number" ng-model="dataCtrl.employeeInfo.salary"/>
+        </div>
+    </div>
+   </form>

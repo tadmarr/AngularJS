@@ -1,0 +1,160 @@
+(function(){
+    angular.module('employeeApp')
+      .controller('dataController', function($scope,$http) {
+          $scope.employeeInfo = [];
+          var employeeInfo = $scope.getEmployeeInfo = function(){
+                  //Whenever you click this is going to be triggered
+                  //You have to create a promise that some data is going to be retrieved
+                  $http.get("http://localhost:8080/json/employeeInfo.json")
+                  .success(function(data, status, headers, config){
+                     $scope.employeeInfo = data;
+                     $scope.employeeInfo.push(
+                         {
+                         "number": 12,
+                         "firstname": "Tommy",
+                         "lastname": "Kish",
+                         "middlename": "A",
+                         "age": 27,
+                         "designation": "Consultant",
+                         "salary": 64000
+                         }
+                     );
+                  })
+                  .error(function(data, status, headers, config){
+                      alert("AJAX failed!");
+                  });
+                    //Store the data in an object inside the controller
+              }
+              employeeInfo();
+
+});
+
+})();
+/*
+here are two links to database and json file
+http://localhost:8080/json/employeeInfo.json
+http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71
+
+$http.get(url, config)
+$http.post(url, data, config)
+$http.put(url, data, config)
+$http.delete(url, config)
+$http.head(url, config)
+CRUD
+<div ng-controller="MyController" >
+  <button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
+  <br/>
+  Data from server: {{myData.fromServer}}
+</div>
+
+<script>
+  angular.module("myapp", [])
+      .controller("MyController", function($scope, $http) {
+          $scope.myData = {};
+          $scope.myData.doClick = function(item, event) {
+              var responsePromise = $http.get("/angularjs-examples/json-test-data.jsp");
+              responsePromise.success(function(data, status, headers, config) {
+                  $scope.myData.fromServer = data.title;
+              });
+              responsePromise.error(function(data, status, headers, config) {
+                  alert("AJAX failed!");
+              });
+          }
+      } );
+</script>
+$http({
+    method: 'GET',
+    url: 'http://localhost:8080/json/employeeInfo.json'}).success(function(data) {
+        employeeInfo = data;
+    });
+
+*/
+
+
+$http.get('http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71', config).then(successCallback, errorCallback);
+$http.head
+$http.post('/someUrl', data, config).then(successCallback, errorCallback);$http.put
+$http.delete delete(url, [config]);
+
+$http.jsonp
+$http.patch
+
+factory(name, $getFn);
+
+// Simple GET request example:
+$http({
+  method: 'GET',
+  url: '/someUrl'
+}).then(function successCallback(response) {
+    // this callback will be called asynchronously
+    // when the response is available
+  }, function errorCallback(response) {
+    // called asynchronously if an error occurs
+    // or server returns response with an error status.
+  });
+});
+/*
+.directive('employeeTable', function(){
+    return{
+        restrict: 'E',
+        templateUrl:'employee-table.html'
+    }
+});
+
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+            $http({
+                method : "GET",
+                url : "welcome.htm"
+            }).then(function mySucces(response) {
+                $scope.myWelcome = response.data;
+            }, function myError(response) {
+                $scope.myWelcome = response.statusText;
+            });
+        });
+.delete()
+.get()
+.head()
+.jsonp()
+.patch()
+.post()
+.put()
+*/
+var employeeInfo =  [
+                      {
+                        "number": 1,
+                        "firstname": "John",
+                        "lastname": "Waite",
+                        "middlename": "Anthony",
+                        "age": 33,
+                        "designation": "Senior Manager",
+                        "salary": 65500,
+                      },
+                      {
+                        "number": 2,
+                        "firstname": "Aaron",
+                        "lastname": "Cranberry",
+                        "middlename": "G",
+                        "age": 37,
+                        "designation": "Lead",
+                        "salary": 55100,
+                      },
+                      {
+                        "number": 3,
+                        "firstname": "Tyrone",
+                        "lastname": "Gates",
+                        "middlename": "Micro",
+                        "age": 30,
+                        "designation": "Assistant Manager",
+                        "salary": 62400,
+                      },
+                      {
+                        "number": 4,
+                        "firstname": "Ellie",
+                        "lastname": "Candle",
+                        "middlename": "A",
+                        "age": 27,
+                        "designation": "Consultant",
+                        "salary": 64000,
+                      },
+                    ]

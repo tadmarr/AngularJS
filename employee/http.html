@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <!-- database is at http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71"-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+<!--    <script src="bower_components/angular-1.5.2/angular.min.js"></script>-->
+    <script src="json/employeeInfo.json"></script>
+
+</head>
+
+<body ng-app="myapp">
+
+  <div ng-controller="MyController" >
+    <button ng-click="myData.doClick(item, $event)">Send AJAX Request</button>
+    <br/>
+      <div>
+        Data from server: {{myData.fromServer}}<br><br>
+        <table border="1">
+          <caption>Employee Database Management</caption>
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Position</th>
+              <th>Salary</th>
+            </tr>
+            <tr ng-repeat="person in myData.fromServer">
+              <td>{{person.number}}</td>
+              <td>{{person.lastname + ", "}}{{person.firstname}} {{person.middlename}}</td>
+              <td>{{person.age|number}}</td>
+              <td>{{person.designation}}</td>
+              <td>{{person.salary|currency}}</td>
+            </tr>
+        </table>
+      </div>
+  </div>
+
+  <script>
+    angular.module("myapp", [])
+        .controller("MyController", function($scope, $http) {
+            $scope.myData = {info};
+      var info =  $scope.myData.doClick = function(item, event) {
+
+                var responsePromise = $http.get("http://localhost:8080/json/employeeInfo.json");
+
+                responsePromise.success(function(data, status, headers, config) {
+                  $scope.myData.fromServer = data;
+                    console.log(data);
+                    var employee = data;
+                    return employee;
+                });
+                responsePromise.error(function(data, status, headers, config) {
+                    alert("AJAX failed!");
+                });
+            }
+
+
+        } );
+  </script>
+
+</body>
+
+</html>
