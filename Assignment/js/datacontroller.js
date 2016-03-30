@@ -1,7 +1,10 @@
 (function(){
     angular.module('employeeApp')
       .controller('dataController', function($scope, employeeFactory) {
-          employeeFactory.getEmployeeInfo();
+          employeeFactory.getEmployeeInfo().then(function(response){
+              $scope.employeeInfo = response;
+          });
+
 /*          var employeeInfo = $scope.getEmployeeInfo = function(){
                   //Whenever you click this is going to be triggered
                   //You have to create a promise that some data is going to be retrieved
