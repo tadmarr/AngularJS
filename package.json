@@ -15,5 +15,8 @@
     "url": "https://github.com/tadmarr/AngularJS/issues"
   },
   "homepage": "https://github.com/tadmarr/AngularJS#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
