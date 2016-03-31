@@ -7,7 +7,8 @@
              $scope.selectedEmployee = {};
              $scope.selectEmployee = function(employee){
                  $scope.selectedEmployee = employee;
-                  console.log(employee);
+                 employee.isSelected=!employee.isSelected;
+                  console.log($scope.selectedEmployee.isSelected);
              }
 
           });
