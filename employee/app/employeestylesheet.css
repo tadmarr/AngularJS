@@ -18,6 +18,10 @@ tr, td, th {
 .page-container{
 
 }
+.isSelected: active {
+    color: black;
+    background-color: red;
+}
 .table-container tr:hover{
     color: black;
     background-color: #ffe8e8;

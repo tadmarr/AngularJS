@@ -8,12 +8,12 @@
       <th>Position</th>
       <th>Salary</th>
     </tr>
-    <tr ng-repeat="person in employeeInfo | limitTo: 50">
-      <td>{{person.number}}</td>
-      <td>{{person.lastname + ", "}}{{person.firstname}} {{person.middlename}}</td>
-      <td>{{person.age | number}}</td>
-      <td>{{person.designation}}</td>
-      <td>{{person.salary | currency}}</td>
+    <tr ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}" ng-click="selectEmployee(employee);employee.isSelected=!employee.isSelected" ng-repeat="employee in employeeInfo | limitTo: 15">
+      <td>{{employee.number}}</td>
+      <td>{{employee.lastname + ", "}}{{employee.firstname}} {{employee.middlename}}</td>
+      <td>{{employee.age | number}}</td>
+      <td>{{employee.designation}}</td>
+      <td>{{employee.salary | currency}}</td>
     </tr>
 </table>
 </div>
