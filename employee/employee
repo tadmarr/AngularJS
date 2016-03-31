@@ -1,0 +1,9 @@
+Start app
+Show employeeinfo as a flexible table
+    get info with factory and show in table
+
+Show Total Employees (#)
+Show three buttons ADD, EDIT, DELETE
+    ADD onclick opens a form to capture employee info and adds new employee info at top
+    EDIT onclick captures selected employee and updates selected employee info
+    DELETE onclick removes selected employee info
