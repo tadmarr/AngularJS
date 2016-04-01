@@ -5,12 +5,8 @@ body {
     color: grey;
     background-color: black;
     margin: 3em 5em;
-}
-#page-container{
-position: relative;
-width: 50%;
-background-color: blue;
-}
+    overflow-y: scroll;
+  }
 caption {
    color: #ffe8e8;
    font: sans serif;
@@ -20,11 +16,11 @@ tr, td, th {
   border: 1px solid #555;
   padding: 2px 16px;
 }
-tr th .isSelected {
+tr td .isSelected {
     color: black;
     background-color: red;
 }
-.table-container tr:hover{
+tr:hover{
     color: black;
     background-color: #ffe8e8;
 }
@@ -32,6 +28,7 @@ tr th .isSelected {
     display: flex;
     flex: 1;
     flex-wrap: nowrap;
+    white-space: nowrap;
     color: #ffe8e8;
     margin-left: .5in;
 }
@@ -39,15 +36,16 @@ tr th .isSelected {
     position: fixed;
     left: .5in;
     right: .5in;
+    overflow: hidden;
 }
 #top {
     top: .5;
     background-color: #222;
-    height: 44%;
+    height: 3.5in;
     border-radius: 15px;
 }
 #bottom {
-    bottom: 0;
+    top: 4in;
     background-color: #111;
     height: 50%;
     border-radius: 15px;
@@ -73,6 +71,7 @@ tr th .isSelected {
 .buttons {
     margin: .2in .5in;
     position: relative;
+    white-space: nowrap;
 }
 label  {
 padding: 5px;
