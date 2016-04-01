@@ -34,19 +34,19 @@ tr:hover{
 #top, #bottom {
     position: fixed;
     left: .5in;
-    right: .5in;
     overflow: hidden;
 }
 #top {
-    top: .5;
     background-color: #222;
     height: 3.5in;
     border-radius: 15px;
+    padding-right: .5in;
 }
 #bottom {
     top: 4in;
     background-color: #111;
-    height: 50%;
+    height: 350px;
+    width: 633px;
     border-radius: 15px;
 }
 .forminterface {

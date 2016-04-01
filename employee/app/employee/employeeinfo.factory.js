@@ -8,14 +8,15 @@ angular.module('employeeApp')
 
         //define CRUD methods
         var getEmployeeInfo = function (){
-          return $http.get(employeeInfoJson)
-                    .success(function(response, status, headers, config){
-                    })
-                    .error(function(error, status, headers, config){
-                    });
-                }
+            return $http.get(employeeInfoJson)
+                .success(function(response, status, headers, config){
+                })
+                .error(function(error, status, headers, config){
+                });
+            }
 
         //inject CRUD methods
+
         employeeFactory.getEmployeeInfo = getEmployeeInfo;
 
         //return injected object
@@ -23,8 +24,3 @@ angular.module('employeeApp')
 });
 
 })();
-/*
-here are two links to json file and couchdb database
-http://localhost:8080/json/employeeInfo.json
-http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71
-*/
