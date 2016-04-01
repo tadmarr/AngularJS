@@ -6,6 +6,11 @@ body {
     background-color: black;
     margin: 3em 5em;
 }
+#page-container{
+position: relative;
+width: 50%;
+background-color: blue;
+}
 caption {
    color: #ffe8e8;
    font: sans serif;
@@ -15,10 +20,7 @@ tr, td, th {
   border: 1px solid #555;
   padding: 2px 16px;
 }
-.page-container{
-
-}
-.isSelected {
+tr th .isSelected {
     color: black;
     background-color: red;
 }
@@ -37,43 +39,42 @@ tr, td, th {
     position: fixed;
     left: .5in;
     right: .5in;
-    overflow-y: auto;
-    overflow-x: auto;
 }
 #top {
     top: .5;
     background-color: #222;
     height: 44%;
+    border-radius: 15px;
 }
 #bottom {
     bottom: 0;
-    background-color: #000;
-    height: 56%;
+    background-color: #111;
+    height: 50%;
+    border-radius: 15px;
+}
+.forminterface {
+  position:relative;
+  margin: 0in 0.5in;
+}
+.leftforminterface    {
+  position:absolute;
+  top:.5;
+  left:.5;
+  width:200px;
+  color: black;
+}
+.rightforminterface    {
+  position:absolute;
+  top:.5;
+  left:3in;
+  width:200px;
+  color: black;
 }
 .buttons {
     margin: .2in .5in;
-}
-option {
-    margin-left: 5in;
+    position: relative;
 }
 label  {
 padding: 5px;
 color: white;
-}
-.forminterface {
-    position:relative;
-}
-.leftforminterface    {
-    position:absolute;
-    top:.5;
-    left:.5;
-    width:200px;
-    color: black;
-}
-.rightforminterface    {
-    position:absolute;
-    top:.5;
-    left:3in;
-    width:200px;
-    color: black;
 }

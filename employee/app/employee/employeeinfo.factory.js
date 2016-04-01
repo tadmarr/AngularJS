@@ -24,7 +24,7 @@ angular.module('employeeApp')
 
 })();
 /*
-here are two links to database and json file
+here are two links to json file and couchdb database
 http://localhost:8080/json/employeeInfo.json
 http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71
 */

@@ -13,26 +13,26 @@
     <script src="app/employee/employeetable.controller.js"></script>
     <script src="app/directive/employeeform.directive.js"></script>
     <script src="app/directive/employeetable.directive.js"></script>
-    <!-- <script src="app/employee/employeeselect.controller.js"></script> -->
 </head>
 <body>
-  <div id="page-container">
+
     <div>
-        <div id="top" class="tophalf">
+        <div id="top">
           <employee-table></employee-table>
         </div>
 
         <div id="bottom">
-            <div class="buttons">
-                <button class="btn btn-default" value="add" ng-submit=""/>ADD</button>
-                <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
-                <button class="btn btn-default">DELETE</button>
-            </div>
 
-            <form-interface></form-interface>
+          <div class="buttons">
+            <button class="btn btn-default" value="add" ng-submit=""/>ADD</button>
+            <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
+            <button class="btn btn-default">DELETE</button>
+          </div>
+
+          <form-interface></form-interface>
 
         </div>
     </div>
-  </div>
+
 </body>
 </html>
