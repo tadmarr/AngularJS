@@ -5,7 +5,6 @@ body {
     color: grey;
     background-color: black;
     margin: 3em 5em;
-    overflow-y: scroll;
   }
 caption {
    color: #ffe8e8;

@@ -9,7 +9,7 @@
         <th>Salary</th>
       </tr>
       <tr ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
-       ng-click="selectEmployee(employee)" ng-repeat="employee in employeeInfo | limitTo: 5">
+       ng-click="selectEmployee(employee)" ng-repeat="employee in employeeInfo | limitTo: 9">
         <td>{{employee.number}}</td>
         <td>{{employee.lastname + ", "}}{{employee.firstname}} {{employee.middlename}}</td>
         <td>{{employee.age | number}}</td>
