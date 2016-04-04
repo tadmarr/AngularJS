@@ -5,7 +5,7 @@ body {
     color: grey;
     background-color: black;
     margin: 3em 5em;
-  }
+}
 caption {
    color: #ffe8e8;
    font: sans serif;
@@ -35,19 +35,18 @@ tr:hover{
     position: fixed;
     left: .5in;
     overflow: hidden;
+    border-radius: 15px;
 }
 #top {
     background-color: #222;
     height: 3.5in;
-    border-radius: 15px;
     padding-right: .5in;
 }
 #bottom {
     top: 4in;
     background-color: #111;
-    height: 350px;
+    height: 3.6in;
     width: 659px;
-    border-radius: 15px;
 }
 .forminterface {
   position:relative;
