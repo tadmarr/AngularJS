@@ -8,7 +8,7 @@ angular.module('employeeApp')
 
         //define CRUD methods
         var getEmployeeInfo = function (){
-            return $http.get(couchdbRoot)
+            return $http.get(employeeInfoJson)
                 .success(function(response, status, headers, config){
                 })
                 .error(function(error, status, headers, config){
@@ -24,3 +24,12 @@ angular.module('employeeApp')
 });
 
 })();
+// app.controller('ReviewController', function() {
+//   this.review = {};
+//
+//   this.addReview = function(product) {
+//     product.reviews.push(this.review);
+//
+//     this.review = {};
+//   };
+// });
