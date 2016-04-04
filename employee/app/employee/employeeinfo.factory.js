@@ -20,13 +20,13 @@ angular.module('employeeApp')
             }
 
         //inject CRUD methods
-        // addEmployeeInfo = function (){
-        //     return $http.post(employeeInfoJson)
-        //         .success(function(response, status, headers, config){
-        //         })
-        //         .error(function(error, status, headers, config){
-        //         });
-        //     }
+        addEmployeeInfo = function (){
+            return $http.post(employeeInfoJson)
+                .success(function(response, status, headers, config){
+                })
+                .error(function(error, status, headers, config){
+                });
+            }
         // putEmployeeInfo = function (){
         //     return $http.post(employeeInfoJson)
         //         .success(function(response, status, headers, config){

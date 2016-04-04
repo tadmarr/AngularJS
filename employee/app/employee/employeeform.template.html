@@ -1,5 +1,5 @@
 <div class="buttons">
-  <button class="btn btn-default" ng-click="addEmployeeInfo()">ADD</button>
+  <button class="btn btn-default" ng-click="addEmployeeInfo(employee)">ADD</button>
   <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
   <button class="btn btn-default" ng-click="deleteEmployeeInfo()">DELETE</button>
   {{employee}}<br>
@@ -13,7 +13,12 @@
             <label>Employee Number</label>
             <input type="number" ng-model="employee.number"/><br>
             <label>Employee First Name</label>
-            <input type="text" ng-model="employee.firstname"/><br>
+            <input type="text" ng-model="employee.firstname" ng-change="validateFirstName(employee.firstname)"/><br>
+            <p class="error-message" ng-if="firstNameIsInvalid">
+                {{firstNameValidationMessage}}
+            </p>
+
+
             <label>Employee Last Name</label>
             <input type="text" ng-model="employee.lastname"/><br>
             <label type="text">Employee Middle Name</label>
