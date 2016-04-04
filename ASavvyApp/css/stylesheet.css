@@ -1,14 +1,16 @@
 body {
 	font-family: sans-serif, 'Lucida Sans Unicode', Arial;
-	color: white;
-	background-color: #222;
+	color: rgba(243, 129, 1, 0.98);
+	background-color: #400;
 	margin: 0px;
+	padding: 1in;
 }
 header {
+	white-space: nowrap;
 	font-size: 36px;
 	text-align: center;
 	letter-spacing: 7px;
-	background-color: rgba(80, 80, 80, .5);
+	background-color: rgba(0, 0, 0, .3);
 }
 a {
 	padding: 0px 10px;
