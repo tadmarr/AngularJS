@@ -1,6 +1,6 @@
 (function(){
     angular.module('employeeApp')
-    .directive('formInterface', function(){
+    .directive('formInterface', function(employeeFactory){
         return{
             restrict: 'E',
             templateUrl:'app/employee/employeeform.template.html',
