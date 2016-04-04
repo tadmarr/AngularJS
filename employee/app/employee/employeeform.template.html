@@ -1,6 +1,12 @@
-{{user}}<br>
-{{master}}
-  <form name="editInterface" ng-submit="" novalidate>
+<div class="buttons">
+  <button class="btn btn-default" ng-click="addEmployeeInfo()">ADD</button>
+  <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
+  <button class="btn btn-default" ng-click="deleteEmployeeInfo()">DELETE</button>
+  {{employee}}<br>
+  {{master}}
+</div>
+
+  <form novalidate>
 
     <div class="forminterface">
         <div class="leftforminterface">
@@ -18,7 +24,7 @@
             <label>Employee Age</label>
             <input type="number" ng-model="employee.age"/><br>
             <label type="text">Employee Designation</label>
-               <select ng-placeholder="Senior Manager" ng-model="employee.designation"><br>
+               <select ng-model="employee.designation"><br>
                      <option value="Senior Manager">Senior Manager</option>
                      <option value="Assistant Manager">Assistant Manager</option>
                      <option value="Lead">Lead</option>
@@ -29,6 +35,4 @@
             <input type="number" ng-model="employee.salary"/>
         </div>
     </div>
-    <span>
-</span>
    </form>
