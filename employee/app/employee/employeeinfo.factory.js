@@ -4,10 +4,14 @@ angular.module('employeeApp')
         //define dependencies
         var employeeFactory = {},
             couchdbRoot = "http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71",
-            employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json";
+            employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json",
+            getEmployeeInfo,
+            addEmployeeInfo,
+            putEmployeeInfo,
+            deleteEmployeeInfo;
 
         //define CRUD methods
-        var getEmployeeInfo = function (){
+        getEmployeeInfo = function (){
             return $http.get(employeeInfoJson)
                 .success(function(response, status, headers, config){
                 })
@@ -16,7 +20,27 @@ angular.module('employeeApp')
             }
 
         //inject CRUD methods
-
+        // addEmployeeInfo = function (){
+        //     return $http.post(employeeInfoJson)
+        //         .success(function(response, status, headers, config){
+        //         })
+        //         .error(function(error, status, headers, config){
+        //         });
+        //     }
+        // putEmployeeInfo = function (){
+        //     return $http.post(employeeInfoJson)
+        //         .success(function(response, status, headers, config){
+        //         })
+        //         .error(function(error, status, headers, config){
+        //         });
+        //     }
+        // deleteEmployeeInfo = function (){
+        //     return $http.post(employeeInfoJson)
+        //         .success(function(response, status, headers, config){
+        //         })
+        //         .error(function(error, status, headers, config){
+        //         });
+        //     }
         employeeFactory.getEmployeeInfo = getEmployeeInfo;
 
         //return injected object
