@@ -46,29 +46,28 @@ tr:hover{
     top: 4in;
     background-color: #111;
     height: 350px;
-    width: 633px;
+    width: 659px;
     border-radius: 15px;
 }
 .forminterface {
   position:relative;
   margin: 0in 0.5in;
+  color: black;
 }
 .leftforminterface    {
   position:absolute;
   top:.5;
   left:.5;
   width:200px;
-  color: black;
-}
+ }
 .rightforminterface    {
   position:absolute;
   top:.5;
   left:3in;
   width:200px;
-  color: black;
 }
 .buttons {
-    margin: .2in .5in;
+    margin: .1in .5in;
     position: relative;
     white-space: nowrap;
 }
