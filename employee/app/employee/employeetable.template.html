@@ -1,15 +1,15 @@
-<div class="table-container">
-  <table border="1">
+<div class="table-responsive">
+  <table class="table" border="1">
     <caption>Employee Database Management</caption>
-      <tr>
+      <tr id="table-headers">
         <th>No.</th>
         <th>Name</th>
         <th>Age</th>
         <th>Position</th>
         <th>Salary</th>
       </tr>
-      <tr ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
-       ng-click="selectEmployee(employee)" ng-repeat="employee in employeeInfo | limitTo: 9">
+      <tr class="table-hover" ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
+       ng-click="selectEmployee(employee)" ng-repeat="employee in employeeInfo | limitTo: 10">
         <td>{{employee.number}}</td>
         <td>{{employee.lastname + ", "}}{{employee.firstname}} {{employee.middlename}}</td>
         <td>{{employee.age | number}}</td>
