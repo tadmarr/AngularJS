@@ -1,43 +1,48 @@
-<div class="buttons">
-  <button class="btn btn-default" ng-click="addEmployeeInfo(employee)">ADD</button>
-  <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
-  <button class="btn btn-default" ng-click="deleteEmployeeInfo()">DELETE</button>
-  {{employee}}<br>
-  {{master}}
-</div>
+    <div class="buttons">
+      <button class="btn btn-default" ng-disabled="!employeeForm.$valid" ng-click="addEmployeeInfo(employee)">ADD</button>
+      <button class="btn btn-default" ng-click="getEmployeeInfo()">EDIT</button>
+      <button class="btn btn-default" ng-click="deleteEmployeeInfo()">DELETE</button>
 
-  <form novalidate>
+     <!-- Validation message -->
+     <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span>
+     <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span>
+    </div>
+  <form class="form-control" name="employeeForm" novalidate>
 
-    <div class="forminterface">
-        <div class="leftforminterface">
-            <label>Employee Number</label>
-            <input type="number" ng-model="employee.number"/><br>
-            <label>Employee First Name</label>
-            <input type="text" ng-model="employee.firstname" ng-change="validateFirstName(employee.firstname)"/><br>
-            <p class="error-message" ng-if="firstNameIsInvalid">
-                {{firstNameValidationMessage}}
-            </p>
+    <div>
+        <div>
+            <!-- <label>Employee Number</label>
+            <input type="number" ng-model="employee.number"/><br> -->
+            <label>Employee First Name<span class=required-asterix>*</span></label>
 
+            <!-- <input type="text" ng-model="employee.firstname" ng-change="validateFirstName(employee.firstname)"/><br>
+                <p class="error-message" ng-if="firstNameIsInvalid">
+                    {{firstNameValidationMessage}}
+                </p> -->
+            <input type="text" minlength=3 maxlength=15 ng-model="employee.firstname" required/><br>
 
-            <label>Employee Last Name</label>
-            <input type="text" ng-model="employee.lastname"/><br>
-            <label type="text">Employee Middle Name</label>
+            <label>Employee Last Name<span class=required-asterix>*</span></label>
+            <input type="text" minlength=3 maxlength=15 ng-model="employee.lastname" required/><br>
+
+            <label>Employee Middle Name</label>
             <input type="text" ng-model="employee.middlename"/><br>
         </div>
 
-        <div class="rightforminterface">
-            <label>Employee Age</label>
-            <input type="number" ng-model="employee.age"/><br>
-            <label type="text">Employee Designation</label>
-               <select ng-model="employee.designation"><br>
+        <div>
+            <label>Employee Age<span class=required-asterix>*</span></label>
+            <input type="number" min=18 max=65 ng-model="employee.age" required/><br>
+
+            <label>Employee Designation<span class=required-asterix>*</span></label>
+               <select ng-model="employee.designation" required><br>
                      <option value="Senior Manager">Senior Manager</option>
                      <option value="Assistant Manager">Assistant Manager</option>
                      <option value="Lead">Lead</option>
                      <option value="Senior Consultant">Senior Consultant</option>
                      <option value="Consultant">Consultant</option>
                </select><br>
-            <label>Salary</label>
-            <input type="number" ng-model="employee.salary"/>
+
+            <label>Salary<span class=required-asterix>*</span></label>
+            <input type="number" min=1 ng-model="employee.salary" required/>
         </div>
     </div>
    </form>

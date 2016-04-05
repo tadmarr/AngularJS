@@ -1,7 +1,23 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
-.error-message {
+/*.ng-invalid.ng-dirty {
+    border-color: #fa787e;
+}
+.ng-valid.ng-dirty {
+    border-color: #78fa89;
+}
+.inValid-message{
+    color: #fa787e;
+}
+.isValid-message{
+    color: #78fa89;
+}
+.required-asterix{
+    color: #fa787e;
+}*/
+
+/*.error-message {
     color: red;
 }
 body {
@@ -76,4 +92,4 @@ tr:hover{
 label  {
 padding: 5px;
 color: white;
-}
+}*/
