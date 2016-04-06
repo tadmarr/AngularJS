@@ -29,15 +29,18 @@
 }
 body {
     background-color: #fff;
-    margin: 3em 5em;
+    margin: 1em 5em;
 }
 caption {
     text-align: center;
     color: black;
+    font-weight: bold;
+    letter-spacing: 1pt;
+    padding: 1pt;
 }
 
-#table-headers {
-    border: 1px solid black;
+table {
+    border: 2px solid #bbb;
 }
 /*
 caption {
