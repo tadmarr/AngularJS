@@ -42,16 +42,11 @@ caption {
 table {
     border: 2px solid #bbb;
 }
+.table-hover {
+    color: black;
+    background-color: #ffe8e8;
+}
 /*
-caption {
-   color: #ffe8e8;
-   font: sans serif;
-   letter-spacing: 1px;
-}
-tr, td, th {
-  border: 1px solid #555;
-  padding: 2px 16px;
-}
 tr td .isSelected {
     color: black;
     background-color: red;

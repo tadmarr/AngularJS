@@ -14,7 +14,7 @@
        };
     //    Form Validation
     //    $scope.validateFirstName = function(firstname) {
-    //        if (firstname.length < 2 || firstname.length > 15){
+    //        if (firstname.length < 3 || firstname.length > 15){
     //            $scope.firstNameIsInvalid = true;
     //            $scope.firstNameValidationMessage = 'Please enter a valid name';
     //        }

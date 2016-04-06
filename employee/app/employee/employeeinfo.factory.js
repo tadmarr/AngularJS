@@ -4,6 +4,7 @@ angular.module('employeeApp')
         //define dependencies
         var employeeFactory = {},
             couchdbRoot = "http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71",
+            other = "http://localhost:5984/other/424d51bf9bc04cdef6e6264c6c00448b",
             employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json",
             getEmployeeInfo,
             addEmployeeInfo,
@@ -13,7 +14,7 @@ angular.module('employeeApp')
         //define CRUD methods
         getEmployeeInfo = function (){
             return $http.get(employeeInfoJson)
-                .success(function(response, status, headers, config){
+                .success(function(response, status, headers, config){console.log(response);
                 })
                 .error(function(error, status, headers, config){
                 });

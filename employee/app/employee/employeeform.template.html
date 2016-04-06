@@ -1,17 +1,17 @@
-    <div class="buttons">
+    <div>
       <button class="btn btn-success" ng-disabled="!employeeForm.$valid" ng-click="addEmployeeInfo(employee)">ADD</button>
       <button class="btn btn-info" ng-click="getEmployeeInfo()">EDIT</button>
       <button class="btn btn-danger" ng-click="deleteEmployeeInfo()">DELETE</button>
 
      <!-- Validation message -->
-     <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span>
+     <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
      <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span>
     </div>
   <form class="form-virtical" role="form" name="employeeForm" novalidate>
 
     <div>
         <div class="form-group">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                 <!-- <label>Employee Number</label>
                 <input type="number" ng-model="employee.number"/><br> -->
                 <label>Employee First Name<span class=required-asterix>*</span></label>
@@ -29,7 +29,8 @@
                 <input class="form-control" type="text" ng-model="employee.middlename"/><br>
             </div>
 
-            <div class="col-sm-6">
+
+            <div class="col-sm-4">
 
                 <label>Employee Age<span class=required-asterix>*</span></label>
                 <input class="form-control" type="number" min=18 max=65 ng-model="employee.age" required/><br>
