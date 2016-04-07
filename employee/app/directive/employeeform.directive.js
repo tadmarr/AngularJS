@@ -3,9 +3,9 @@
     .directive('formInterface', function(employeeFactory){
         return{
             restrict: 'E',
-            templateUrl:'app/employee/employeeform.template.html',
-            controller: 'formController',
-            controllerAs: 'formCtrl'
+            templateUrl:'app/employee/employeedatabaseinterface.template.html',
+            controller: 'employeeController',
+            controllerAs: 'employeeCtrl'
         };
     })
 })();
