@@ -1,0 +1,76 @@
+
+    <article class="table-responsive">
+      <table class="table" border="1">
+        <caption>Employee Database Management</caption>
+          <tr id="table-headers">
+            <th>No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Position</th>
+            <th>Salary</th>
+          </tr>
+          <tr class="table-hover" ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
+           ng-click="selectEmployee(employee)" ng-repeat="employee in employeeInfo | limitTo: 5">
+            <td>{{employee.number}}</td>
+            <td>{{employee.lastname|uppercase}}, {{employee.firstname|uppercase}} {{employee.middlename|uppercase}}</td>
+            <td>{{employee.age | number}}</td>
+            <td>{{employee.designation}}</td>
+            <td>{{employee.salary | currency}}</td>
+          </tr>
+      </table>
+  </article>
+
+<section>
+    <button class="btn btn-success" ng-disabled="!employeeForm.$valid" ng-click="addEmployeeInfo(employee)">ADD</button>
+    <button class="btn btn-info" ng-click="getEmployeeInfo()">EDIT</button>
+    <button class="btn btn-danger" ng-click="deleteEmployeeInfo()">DELETE</button>
+
+    <!-- Validation message -->
+    <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
+    <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span>
+</section>
+<article class="form">
+<form class="form-virtical" role="form" name="employeeForm" novalidate>
+
+        <section class="form-group">
+            <caption>Employee Information</caption>
+            <div>
+                <div class="col-sm-3">
+                    <!-- <label>Employee Number</label>
+                    <input type="number" ng-model="employee.number"/><br> -->
+                    <label>First Name<span class=required-asterix>*</span></label>
+                    <input class="form-control" type="name" minlength=3 maxlength=15 ng-model="employee.firstname" required/><br>
+
+                    <!-- <input type="text" ng-model="employee.firstname" ng-change="validateFirstName(employee.firstname)"/><br>
+                        <p class="error-message" ng-if="firstNameIsInvalid">
+                            {{firstNameValidationMessage}}
+                        </p> -->
+
+                    <label>Last Name<span class=required-asterix>*</span></label>
+                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.lastname" required/><br>
+
+                    <label>Middle Name<span class=notrequired-asterix>*</span></label>
+                    <input class="form-control" type="text" ng-model="employee.middlename" maxlength=15/><br>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <label>Age<span class=required-asterix>*</span></label>
+                    <input class="form-control" type="number" min=14 max=70 ng-model="employee.age" pattern="\d*" required/><br>
+
+                    <label>Designation<span class=required-asterix>*</span></label>
+                       <select class="form-control" ng-model="employee.designation" required><br>
+                             <option value="Senior Manager">Senior Manager</option>
+                             <option value="Assistant Manager">Assistant Manager</option>
+                             <option value="Lead">Lead</option>
+                             <option value="Senior Consultant">Senior Consultant</option>
+                             <option value="Consultant">Consultant</option>
+                       </select><br>
+
+                    <label>Salary<span class=required-asterix>*</span></label>
+                    <input class="form-control" type="number" min=1 max=9999999999 ng-model="employee.salary" pattern="\d*" required/>
+                </div>
+            </div>
+        </section>
+</form>
+</article>
