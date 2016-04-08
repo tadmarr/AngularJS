@@ -28,7 +28,7 @@
     color: #fa787e;
 }
 body {
-    background-color: #fff;
+    background-color: #ccc;
     margin: 1em 5em;
 }
 caption {
@@ -39,16 +39,23 @@ caption {
     padding: 1pt;
 }
 
-table {
-    border: 2px solid #bbb;
+.table {
+    border: 2px solid rgba(70, 184, 218, 1);
+    /*height: 3.5in;*/
+}
+.table>tbody>tr>th {
+    background-color: rgba(100, 214, 248, 1);
+}
+.table>tbody>tr>td{
+    padding: 5px;
 }
 .table-hover {
     color: black;
-    background-color: #ffe8e8;
+    background-color: #b9b9b9;
 }
-tr:hover{
+.table-hover:hover{
     color: black;
-    background-color: #5bc0de;
+    background-color: #46b8da;
 }
 /*
 tr td .isSelected {
