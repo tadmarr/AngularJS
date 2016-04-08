@@ -46,11 +46,3 @@
      }]);
 
 })();
-//   .controller('formController', function($scope, employeeFactory) {
-//       employeeFactory.getEmployeeInfo().then(function(response){
-//           $scope.employeeInfo = response.data;
-//
-//
-//       });
-//   });
-// angular.module('employeeApp')

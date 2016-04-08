@@ -1,9 +1,9 @@
 (function(){
     angular.module('employeeApp')
-    .directive('formInterface', function(employeeFactory){
+    .directive('employeeInterface', function(employeeFactory){
         return{
             restrict: 'E',
-            templateUrl:'app/employee/employeedatabaseinterface.template.html',
+            templateUrl:'app/employee/employeeDatabaseInterface.template.html',
             controller: 'employeeController',
             controllerAs: 'employeeCtrl'
         };

@@ -46,14 +46,14 @@ table {
     color: black;
     background-color: #ffe8e8;
 }
+tr:hover{
+    color: black;
+    background-color: #5bc0de;
+}
 /*
 tr td .isSelected {
     color: black;
     background-color: red;
-}
-tr:hover{
-    color: black;
-    background-color: #ffe8e8;
 }
 
 #top, #bottom {
