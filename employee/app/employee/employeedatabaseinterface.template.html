@@ -1,7 +1,7 @@
-
+    <!-- Table showing database -->
     <main class="table-responsive">
       <table class="table" border="1">
-        <caption>Employee Database Management</caption>
+        <caption><h4>Employee Database Management</h4></caption>
           <tr id="table-headers">
             <th>No.</th>
             <th>Name</th>
@@ -17,9 +17,10 @@
             <td>{{employee.designation}}</td>
             <td>{{employee.salary | currency}}</td>
           </tr>
-      </table>
+     </table>
   </main>
 
+<!-- Buttons: ADD, EDIT, DELETE -->
 <section>
     <button class="btn btn-success" ng-disabled="!employeeForm.$valid" ng-click="addEmployeeInfo(employee)">ADD</button>
     <button class="btn btn-info" ng-click="getEmployeeInfo()">EDIT</button>
@@ -29,6 +30,8 @@
     <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
     <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span>
 </section>
+
+<!-- Container for the form -->
 <article class="form">
 <form class="form-virtical" role="form" name="employeeForm" novalidate>
 
