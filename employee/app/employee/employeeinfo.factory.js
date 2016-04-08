@@ -11,7 +11,7 @@ angular.module('employeeApp')
             putEmployeeInfo,
             deleteEmployeeInfo;
 
-        //define CRUD methods
+        // Define CRUD methods
         getEmployeeInfo = function (){
             return $http.get(employeeInfoJson)
                 .success(function(response, status, headers, config){console.log(response);
@@ -19,9 +19,10 @@ angular.module('employeeApp')
                 .error(function(error, status, headers, config){
                 });
             }
+            employeeFactory.getEmployeeInfo = getEmployeeInfo;
 
         //inject CRUD methods
-        addEmployeeInfo = function (){
+        addEmployeeInfo = function (employee){
             return $http.post(employeeInfoJson)
                 .success(function(response, status, headers, config){
                 })
@@ -42,7 +43,6 @@ angular.module('employeeApp')
         //         .error(function(error, status, headers, config){
         //         });
         //     }
-        employeeFactory.getEmployeeInfo = getEmployeeInfo;
 
         //return injected object
         return employeeFactory;
