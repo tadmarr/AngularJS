@@ -3,21 +3,21 @@ angular.module('employeeApp')
 .factory('employeeFactory', function($http) {
         //define dependencies
         var employeeFactory = {},
-            couchdbRoot = "http://localhost:5984/database/424d51bf9bc04cdef6e6264c6c001d71",
-            other = "http://localhost:5984/other/424d51bf9bc04cdef6e6264c6c00448b",
+            couchdbRoot = "http://localhost:5984/database",
+            other = "http://localhost:5984/other/",
             employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json",
-            url = other,
+            url = couchdbRoot,
             getEmployeeInfo,
             addEmployeeInfo,
             putEmployeeInfo,
-            deleteEmployeeInfo;
+            deleteEmployeeInfo,
+            createEmployeeInfo;
 
         // Define CRUD methods
         getEmployeeInfo = function (){
             return $http.get(url)
                 .success(function(response, status, headers, config){
                     console.log(response);
-                    console.log(config, headers)
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -25,7 +25,7 @@ angular.module('employeeApp')
 
         //inject CRUD methods
         addEmployeeInfo = function (employee){
-            return $http.post(url)
+            return $http.post(url, employee)
                 .success(function(response, status, headers, config){
                 })
                 .error(function(error, status, headers, config){

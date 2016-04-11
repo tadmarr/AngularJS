@@ -11,7 +11,7 @@
     border-color: #5cb85c;
 }
 .inValid-message{
-    color: #fa787e;
+    color: red;
 }
 .isValid-message{
     color: #5cb85c;
@@ -41,7 +41,6 @@ caption {
 
 .table {
     border: 2px solid rgba(70, 184, 218, 1);
-    /*height: 3.5in;*/
 }
 .table>tbody>tr>th {
     background-color: rgba(100, 214, 248, 1);

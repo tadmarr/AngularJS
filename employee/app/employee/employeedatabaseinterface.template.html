@@ -20,15 +20,15 @@
      </table>
   </main>
 
-<!-- Buttons: ADD, EDIT, DELETE --> <!-- ng-disabled="!employeeForm.$valid"-->
+<!-- Buttons: ADD, EDIT, DELETE -->
 <section>
-    <button class="btn btn-success" ng-click="addEmployeeInfo()">ADD</button>
+    <button class="btn btn-success" ng-click="addEmployeeInfo()">ADD</button> <!-- ng-disabled="!employeeForm.$valid"-->
     <button class="btn btn-info" ng-click="getEmployeeInfo()">EDIT</button>
     <button class="btn btn-danger" ng-click="deleteEmployeeInfo()">DELETE</button>
 
     <!-- Validation message -->
-    <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
-    <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span>
+    <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span>
+    <!-- <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span> -->
 </section>
 
 <!-- Container for the form -->
