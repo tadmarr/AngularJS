@@ -17,11 +17,17 @@
       $scope.formInvalidMessage = false;
 
       $scope.addEmployeeInfo = function(employee) {
-        if(!employeeForm.$valid){
-            $scope.formInvalidMessage = true;
-            return;
-        }
-
+        // if(!employeeForm.$valid){
+        //     $scope.formInvalidMessage = true;
+        //     console.log('formInvalidMessage');
+        //     return;
+        // }
+        employeeFactory.addEmployeeInfo(employee).then(function(response){
+            $scope.employeeInfo = response.data;
+            console.log(response);
+        }).catch(function(error){
+            console.log(error);
+        })
        };
     //    Form Validation
     //    $scope.validateFirstName = function(firstname) {
