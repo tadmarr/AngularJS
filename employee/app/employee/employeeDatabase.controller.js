@@ -3,8 +3,8 @@
     .controller('employeeController', ['$scope','employeeFactory', function($scope, employeeFactory) {
 
         employeeFactory.getEmployeeInfo().then(function(response){
-            $scope.employeeInfo = response.data;
-            console.log(response);
+            $scope.employees = response.data.rows;
+
 
         // Selected employee true/false toggle
         //    $scope.selectedEmployee = {};
