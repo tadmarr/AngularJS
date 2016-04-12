@@ -4,6 +4,7 @@
 
         employeeFactory.getEmployeeInfo().then(function(response){
             $scope.employeeInfo = response.data;
+            console.log(response);
 
         // Selected employee true/false toggle
         //    $scope.selectedEmployee = {};

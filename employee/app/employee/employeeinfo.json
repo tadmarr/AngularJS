@@ -1,7 +1,5 @@
 [
 {
-   "_id": "424d51bf9bc04cdef6e6264c6c00448a",
-   "_rev": "4-f3bdba4d0c56a8654f89b0b3f456f0f1",
    "number": 10,
    "firstname": "Bryan",
    "lastname": "Candle",
@@ -12,8 +10,6 @@
    "isSelected": false
 },
 {
-   "_id": "424d51bf9bc04cdef6e6264c6c004489",
-   "_rev": "4-f3bdba4d0c56a8654f89b0b3f456f0f2",
    "number": 11,
    "firstname": "Vivian",
    "lastname": "Zoo",
@@ -24,8 +20,6 @@
    "isSelected": false
 },
 {
-   "_id": "424d51bf9bc04cdef6e6264c6c004488",
-   "_rev": "4-f3bdba4d0c56a8654f89b0b3f456f0f3",
    "number": 1,
    "firstname": "John",
    "lastname": "Waite",
@@ -36,8 +30,6 @@
    "isSelected": false
 },
 {
-   "_id": "424d51bf9bc04cdef6e6264c6c004487",
-   "_rev": "4-f3bdba4d0c56a8654f89b0b3f456f0f4",
    "number": 2,
    "firstname": "Aaron",
    "lastname": "Cranberry",
@@ -48,8 +40,6 @@
    "isSelected": false
 },
 {
-   "_id": "424d51bf9bc04cdef6e6264c6c004486",
-   "_rev": "4-f3bdba4d0c56a8654f89b0b3f456f0f5",
    "number": 3,
    "firstname": "Tyrone",
    "lastname": "Gates",

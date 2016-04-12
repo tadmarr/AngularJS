@@ -5,12 +5,11 @@ angular.module('employeeApp')
         var myDataRef = new Firebase("https://pmyhcfjn7wh.firebaseio-demo.com/");
         var employeeFactory = {}
             ,home = "http://localhost:5984/database/de17c073fce647c0254657faf8000a49"
-            ,firedata = "https://nsyuhlfu386.firebaseio-demo.com/"
-            ,firedata2= "https://employeeinfo.firebaseio.com"
-            ,couchdbRoot = "http://localhost:5984/database"
-            ,other = "http://localhost:5984/other/"
+            ,firedata = "https://employeeinfo.firebaseio.com"
+            ,couchdbRoot = "http://localhost:5984/database/_all_docs/include_docs=true"
+            ,other = "http://localhost:5984/other/_all_docs"
             ,employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json"
-            ,url = firedata2
+            ,url = other
             ,getEmployeeInfo
             ,addEmployeeInfo
             ,putEmployeeInfo
