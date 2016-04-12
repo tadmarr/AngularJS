@@ -1,9 +1,8 @@
 (function(){
     angular.module('employeeApp')
     .controller('employeeController', ['$scope','employeeFactory', function($scope, employeeFactory) {
-        debugger;
-        employeeFactory.getEmployeeInfo().then(function(response){
 
+        employeeFactory.getEmployeeInfo().then(function(response){
             $scope.employeeInfo = response.data;
 
         // Selected employee true/false toggle

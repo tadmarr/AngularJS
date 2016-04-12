@@ -2,16 +2,20 @@
 angular.module('employeeApp')
 .factory('employeeFactory', function($http) {
         //define dependencies
-        var employeeFactory = {},
-            couchdbRoot = "http://localhost:5984/database",
-            other = "http://localhost:5984/other/",
-            employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json",
-            url = couchdbRoot,
-            getEmployeeInfo,
-            addEmployeeInfo,
-            putEmployeeInfo,
-            deleteEmployeeInfo,
-            createEmployeeInfo;
+        var myDataRef = new Firebase("https://pmyhcfjn7wh.firebaseio-demo.com/");
+        var employeeFactory = {}
+            ,home = "http://localhost:5984/database/de17c073fce647c0254657faf8000a49"
+            ,firedata = "https://nsyuhlfu386.firebaseio-demo.com/"
+            ,firedata2= "https://employeeinfo.firebaseio.com"
+            ,couchdbRoot = "http://localhost:5984/database"
+            ,other = "http://localhost:5984/other/"
+            ,employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json"
+            ,url = firedata2
+            ,getEmployeeInfo
+            ,addEmployeeInfo
+            ,putEmployeeInfo
+            ,deleteEmployeeInfo
+            ,createEmployeeInfo;
 
         // Define CRUD methods
         getEmployeeInfo = function (){
@@ -42,14 +46,6 @@ angular.module('employeeApp')
 });
 
 })();
-
-
-
-
-
-
-
-
 
 
 
