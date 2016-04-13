@@ -3,7 +3,6 @@ angular.module('employeeApp')
 .factory('employeeFactory', function($http) {
         //define dependencies
         var employeeFactory = {}
-            ,couchdbRoot = "http://localhost:5984/database/_all_docs?include_docs=true"
             ,other = "http://localhost:5984/other/_design/other/_view/other"
             ,mydatabase = "http://localhost:5984/mydatabase/_temp_view"
             ,employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json"
@@ -27,7 +26,7 @@ angular.module('employeeApp')
         //inject CRUD methods
         addEmployeeInfo = function (employee){
             return $http.post(url, employee)
-                .success(function(response, status, headers, config){
+                .success(function(response, status, headers, config){console.log(employee);
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -43,10 +42,6 @@ angular.module('employeeApp')
 });
 
 })();
-
-
-
-
 
 
 
