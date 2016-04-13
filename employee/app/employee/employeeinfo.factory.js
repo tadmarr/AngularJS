@@ -4,11 +4,11 @@ angular.module('employeeApp')
         //define dependencies
         var employeeFactory = {}
             ,couchdb = "http://localhost:5984/other/_all_docs?include_docs=true"
-            ,maincouchdb = "http://localhost:5984/other/_design/other/_view/other"
             ,mydatabase = "http://localhost:5984/mydatabase/_temp_view"
-            ,employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json"
+            // ,employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json"
+            ,maincouchdb = "http://localhost:5984/other/_design/other/_view/other"
             ,url = maincouchdb
-            
+
             ,getEmployeeInfo
             ,addEmployeeInfo
             ,putEmployeeInfo
@@ -19,7 +19,6 @@ angular.module('employeeApp')
         getEmployeeInfo = function (){
             return $http.get(url)
                 .success(function(response, status, headers, config){
-                    console.log(response);
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -28,7 +27,15 @@ angular.module('employeeApp')
         //inject CRUD methods
         addEmployeeInfo = function (employee){
             return $http.post(url, employee)
-                .success(function(response, status, headers, config){
+                .success(function(response, status, headers, config){getEmployeeInfo();
+                })
+                .error(function(error, status, headers, config){
+                });
+            }
+
+        deleteEmployeeInfo = function (employee){
+            return $http.delete(url, employee)
+                .success(function(response, status, headers, config){deleteEmployeeInfo();
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -41,16 +48,17 @@ angular.module('employeeApp')
 
         //return injected object
         return employeeFactory;
+
 });
 
 })();
 
-
-
-
-
-
-
+//        /{db}/_design/{ddoc}
+//        HEAD /{db}/_design/{ddoc}	Returns bare information in the HTTP Headers for the design document
+//        GET /{db}/_design/{ddoc}	Returns the design document
+//        PUT /{db}/_design/{ddoc}	Creates a new design document or new version of an existing one
+//        DELETE /{db}/_design/{ddoc}	Deletes the design document
+//        COPY /{db}/_design/{ddoc}	Copies the design document
 
 // putEmployeeInfo = function (){
 //     return $http.post(employeeInfoJson)

@@ -1,24 +1,24 @@
     <!-- Table showing database -->
     <main class="table-responsive">
-      <table class="table" border="1">
-        <caption><h4>Employee Database Management</h4></caption>
-          <tr id="table-headers">
-            <th>No.</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Position</th>
-            <th>Salary</th>
-          </tr>
-          <tr class="table-hover" ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
-           ng-click="selectEmployee(employee)" ng-repeat="employee in employees | limitTo: 20">
-            <td>{{employee.value.number}}</td>
-            <td>{{employee.value.lastname | uppercase}}, {{employee.value.firstname | uppercase}} {{employee.value.middlename | uppercase}}</td>
-            <td>{{employee.value.age | number}}</td>
-            <td>{{employee.value.designation}}</td>
-            <td>{{employee.value.salary | currency}}</td>
-          </tr>
-     </table>
-  </main>
+        <table class="table" border="1">
+            <caption><h4>Employee Database Management</h4></caption>
+              <tr id="table-headers">
+                <th>No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Position</th>
+                <th>Salary</th>
+              </tr>
+              <tr class="table-hover" ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
+               ng-click="selectEmployee(employee)" ng-repeat="employee in employees | limitTo: 20">
+                <td>{{employee.value.number}}</td>
+                <td>{{employee.value.lastname | uppercase}}, {{employee.value.firstname | uppercase}} {{employee.value.middlename | uppercase}}</td>
+                <td>{{employee.value.age | number}}</td>
+                <td>{{employee.value.designation}}</td>
+                <td>{{employee.value.salary | currency}}</td>
+              </tr>
+        </table>
+    </main>
 
 <!-- Buttons: ADD, EDIT, DELETE -->
 <section>
@@ -27,7 +27,7 @@
     <button class="btn btn-danger" ng-click="deleteEmployeeInfo()">DELETE</button>
 
     <!-- Validation message -->
-    <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span>
+    <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
     <!-- <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span> -->
 </section>
 
@@ -42,7 +42,7 @@
                     <!-- <label>Employee Number</label>
                     <input type="number" ng-model="employee.number"/><br> -->
                     <label>First Name<span class=required-asterix>*</span></label>
-                    <input class="form-control" type="name" minlength=3 maxlength=15 ng-model="employee.firstname" required/><br>
+                    <input class="form-control" type="name" minlength=3 maxlength=15 ng-model="employee.firstname" pattern="\D*" required/><br>
 
                     <!-- <input type="text" ng-model="employee.firstname" ng-change="validateFirstName(employee.firstname)"/><br>
                         <p class="error-message" ng-if="firstNameIsInvalid">
@@ -50,10 +50,10 @@
                         </p> -->
 
                     <label>Last Name<span class=required-asterix>*</span></label>
-                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.lastname" required/><br>
+                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.lastname" pattern="\D*" required/><br>
 
                     <label>Middle Name<span class=notrequired-asterix>*</span></label>
-                    <input class="form-control" type="text" ng-model="employee.middlename" maxlength=15/><br>
+                    <input class="form-control" type="text" ng-model="employee.middlename" maxlength=15 pattern="\D*"/><br>
                 </div>
 
 
