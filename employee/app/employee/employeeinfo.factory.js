@@ -3,11 +3,12 @@ angular.module('employeeApp')
 .factory('employeeFactory', function($http) {
         //define dependencies
         var employeeFactory = {}
-            ,couchdbRoot = "http://localhost:5984/database/_all_docs?include_docs=true"
-            ,other = "http://localhost:5984/other/_design/other/_view/other"
+            ,couchdb = "http://localhost:5984/other/_all_docs?include_docs=true"
+            ,maincouchdb = "http://localhost:5984/other/_design/other/_view/other"
             ,mydatabase = "http://localhost:5984/mydatabase/_temp_view"
             ,employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json"
-            ,url = other
+            ,url = maincouchdb
+            
             ,getEmployeeInfo
             ,addEmployeeInfo
             ,putEmployeeInfo

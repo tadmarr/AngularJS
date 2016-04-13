@@ -17,21 +17,21 @@
         });
 
       $scope.employee = {};
-      window.employeeTwo = 222;
       $scope.formInvalidMessage = false;
 
-      $scope.addEmployeeInfo = function(employeeTwo) {
-          function validate(employeeTwo){
-              console.log(employeeTwo);
-          };
+      function validate(employee){
+
+      };
+
+      $scope.addEmployeeInfo = function(employee) {
         // if(!employeeForm.$valid){
         //     $scope.formInvalidMessage = true;
         //     console.log('formInvalidMessage');
         //     return;
         // }
-
-        employeeFactory.addEmployeeInfo(employeeTwo).then(function(response){
-            $scope.employeeInfo = response.data;
+        validate(employee);
+        console.log(employee);
+        employeeFactory.addEmployeeInfo(employee).then(function(response){
             console.log(response);
         }).catch(function(error){
             console.log(error);
