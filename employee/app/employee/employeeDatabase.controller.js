@@ -5,7 +5,15 @@
         // Define variable dependencies
         $scope.employee = {};
         $scope.formInvalidMessage = false;
+        $scope.selectEmployee = selectEmployee;
         $scope.addEmployeeInfo = addEmployeeInfo;
+        $scope.editEmployeeInfo = editEmployeeInfo;
+        
+
+        function selectEmployee(employee){
+            $scope.employee = employee.value;
+            console.log(employee);
+        }
 
         // Trigger the constructore function
         activate();
@@ -17,8 +25,8 @@
             getEmployeeInfo();
         }
 
-            // @getEmployeeInfo : Gets a list of employees from CouchDb using our EmployeeFactory
-            function getEmployeeInfo(){
+        // @getEmployeeInfo : Gets a list of employees from CouchDb using our EmployeeFactory
+        function getEmployeeInfo(){
 
             // Calling the factory method for it get the list of employees
             employeeFactory.getEmployeeInfo().then(function(response){
@@ -71,6 +79,8 @@
 
                 // A successful event!
                 console.log(response);
+                getEmployeeInfo();
+
 
             }).catch(function(error){
 

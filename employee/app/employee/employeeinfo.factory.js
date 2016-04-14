@@ -4,19 +4,17 @@ angular.module('employeeApp')
         //define dependencies
         var employeeFactory = {}
             ,BASE_URL = "http://localhost:5984/other/"
-
             // ,couchdb = "http://localhost:5984/other/_all_docs?include_docs=true"
-
             ,getEmployeeInfo
             ,addEmployeeInfo
             ,putEmployeeInfo
-            ,deleteEmployeeInfo
-            ,createEmployeeInfo;
+            ,deleteEmployeeInfo;
 
         // Define CRUD methods
         getEmployeeInfo = function (){
             return $http.get(BASE_URL + "_design/other/_view/other")
                 .success(function(response, status, headers, config){
+                    console.log(response);
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -26,7 +24,6 @@ angular.module('employeeApp')
         addEmployeeInfo = function (employee){
             return $http.post(BASE_URL, employee)
                 .success(function(response, status, headers, config){
-                    getEmployeeInfo();
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -35,17 +32,24 @@ angular.module('employeeApp')
         editEmployeeInfo = function (employee){
             return $http.put(BASE_URL, employee)
                 .success(function(response, status, headers, config){
-                    getEmployeeInfo();
                 })
                 .error(function(error, status, headers, config){
                 });
             }
 
+            deleteEmployeeInfo = function (){
+                return $http.delete(BASE_URL + "729128739b34e541b055b506e50034ab")
+                    .success(function(response, status, headers, config){console.log("YEAH!")
+                    })
+                    .error(function(error, status, headers, config){
+                    });
+                }
 
         // Assign defined methods to employeeFactory object
         employeeFactory.getEmployeeInfo = getEmployeeInfo;
         employeeFactory.addEmployeeInfo = addEmployeeInfo;
         employeeFactory.editEmployeeInfo = editEmployeeInfo;
+        employeeFactory.deleteEmployeeInfo = deleteEmployeeInfo;
 
 
         //return injected object
@@ -61,18 +65,3 @@ angular.module('employeeApp')
 //        PUT /{db}/_design/{ddoc}	Creates a new design document or new version of an existing one
 //        DELETE /{db}/_design/{ddoc}	Deletes the design document
 //        COPY /{db}/_design/{ddoc}	Copies the design document
-
-// putEmployeeInfo = function (){
-//     return $http.post(employeeInfoJson)
-//         .success(function(response, status, headers, config){
-//         })
-//         .error(function(error, status, headers, config){
-//         });
-//     }
-// deleteEmployeeInfo = function (){
-//     return $http.post(employeeInfoJson)
-//         .success(function(response, status, headers, config){
-//         })
-//         .error(function(error, status, headers, config){
-//         });
-//     }
