@@ -3,11 +3,9 @@ angular.module('employeeApp')
 .factory('employeeFactory', function($http) {
         //define dependencies
         var employeeFactory = {}
-            ,couchdb = "http://localhost:5984/other/_all_docs?include_docs=true"
-            ,mydatabase = "http://localhost:5984/mydatabase/_temp_view"
-            // ,employeeInfoJson = "http://localhost:8080/app/employee/employeeinfo.json"
-            ,maincouchdb = "http://localhost:5984/other/_design/other/_view/other"
-            ,url = maincouchdb
+            ,BASE_URL = "http://localhost:5984/other/"
+
+            // ,couchdb = "http://localhost:5984/other/_all_docs?include_docs=true"
 
             ,getEmployeeInfo
             ,addEmployeeInfo
@@ -17,7 +15,7 @@ angular.module('employeeApp')
 
         // Define CRUD methods
         getEmployeeInfo = function (){
-            return $http.get(url)
+            return $http.get(BASE_URL + "_design/other/_view/other")
                 .success(function(response, status, headers, config){
                 })
                 .error(function(error, status, headers, config){
@@ -26,16 +24,18 @@ angular.module('employeeApp')
 
         //inject CRUD methods
         addEmployeeInfo = function (employee){
-            return $http.post(url, employee)
-                .success(function(response, status, headers, config){getEmployeeInfo();
+            return $http.post(BASE_URL, employee)
+                .success(function(response, status, headers, config){
+                    getEmployeeInfo();
                 })
                 .error(function(error, status, headers, config){
                 });
             }
 
-        deleteEmployeeInfo = function (employee){
-            return $http.delete(url, employee)
-                .success(function(response, status, headers, config){deleteEmployeeInfo();
+        editEmployeeInfo = function (employee){
+            return $http.put(BASE_URL, employee)
+                .success(function(response, status, headers, config){
+                    getEmployeeInfo();
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -45,6 +45,8 @@ angular.module('employeeApp')
         // Assign defined methods to employeeFactory object
         employeeFactory.getEmployeeInfo = getEmployeeInfo;
         employeeFactory.addEmployeeInfo = addEmployeeInfo;
+        employeeFactory.editEmployeeInfo = editEmployeeInfo;
+
 
         //return injected object
         return employeeFactory;

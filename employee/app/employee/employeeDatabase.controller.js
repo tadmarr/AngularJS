@@ -17,8 +17,8 @@
             getEmployeeInfo();
         }
 
-        // @getEmployeeInfo : Gets a list of employees from CouchDb using our EmployeeFactory
-        function getEmployeeInfo(){
+            // @getEmployeeInfo : Gets a list of employees from CouchDb using our EmployeeFactory
+            function getEmployeeInfo(){
 
             // Calling the factory method for it get the list of employees
             employeeFactory.getEmployeeInfo().then(function(response){
