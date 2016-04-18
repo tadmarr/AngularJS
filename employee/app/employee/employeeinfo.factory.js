@@ -4,8 +4,8 @@ angular.module('employeeApp')
         //define dependencies
         var employeeFactory = {}
             ,BASE_URL = "http://localhost:5984/other/"
-            ,URL_FOR_DELETE = "23f49f6707c1d620331cea6c540018e6?2-a19f8a01339627875531891a673d520f="
-            //"23f49f6707c1d620331cea6c540018e6?include_docs=true"
+            ,URL_FOR_DELETE = "729128739b34e541b055b506e5006f39?rev=3-19632e6bba6028a996f1e67b7d5b08aa"
+            // "23f49f6707c1d620331cea6c540018e6?2-a19f8a01339627875531891a673d520f="
             ,getEmployeeInfo
             ,addEmployeeInfo
             ,putEmployeeInfo
@@ -15,7 +15,6 @@ angular.module('employeeApp')
         getEmployeeInfo = function (){
             return $http.get(BASE_URL + "_design/other/_view/other")
                 .success(function(response, status, headers, config){
-                    console.log(response);
                 })
                 .error(function(error, status, headers, config){
                 });
@@ -30,8 +29,9 @@ angular.module('employeeApp')
                 });
             }
 
-        editEmployeeInfo = function (employee){
-            return $http.put(BASE_URL, employee)
+        editEmployeeInfo = function (employee){console.log(employee._id);
+            var _id = employee._id;
+            return $http.put(BASE_URL + employee._id, employee)
                 .success(function(response, status, headers, config){
                 })
                 .error(function(error, status, headers, config){
