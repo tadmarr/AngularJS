@@ -118,6 +118,9 @@
 
            })
       };
+
+
+
     //    Form Validation
     //    $scope.validateFirstName = function(firstname) {
     //        if (firstname.length < 3 || firstname.length > 15){

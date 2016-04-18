@@ -11,7 +11,7 @@
               </tr>
               <tr class="table-hover" ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
                ng-click="selectEmployee(employee)" ng-repeat="employee in employees | limitTo: 10">
-                <td>{{employee.value.number}}</td>
+                <td>{{employee.value._id|limitTo: 9: 24 }}</td>
                 <td>{{employee.value.lastname | uppercase}}, {{employee.value.firstname | uppercase}} {{employee.value.middlename | uppercase}}</td>
                 <td>{{employee.value.age | number}}</td>
                 <td>{{employee.value.designation}}</td>
@@ -21,7 +21,7 @@
     </main>
 
 <!-- @Buttons: ADD, EDIT, DELETE -->
-<section>
+<section class>
     <button class="btn btn-success" ng-click="addEmployeeInfo(employee)">ADD</button> <!-- ng-disabled="!employeeForm.$valid"-->
     <button class="btn btn-info" ng-click="editEmployeeInfo(employee)">EDIT</button>
     <button class="btn btn-danger" ng-click="deleteEmployeeInfo(employee)">DELETE</button>
@@ -37,8 +37,8 @@
 
         <section class="form-group"><hr>
             <header>Employee Information</header>
-            <label>Employee Number: {{employee._id}}</label>
-            <input type="number" ng-model="employee.number"/><br>
+            <label>Employee Number: {{employee._id| limitTo : 9 : 23}}</label>
+            <!-- <input type="number" ng-model="employee.number"/><br> -->
             <div>
                 <div class="col-sm-3">
                     <label>First Name<span class="required-asterix">*</span></label>
