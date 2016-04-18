@@ -56,6 +56,10 @@ caption {
     color: black;
     background-color: #46b8da;
 }
+.selectEmployee:active{
+    color: white;
+    background-color: #00f;
+}
 /*
 tr td .isSelected {
     color: black;

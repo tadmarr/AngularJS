@@ -4,7 +4,8 @@ angular.module('employeeApp')
         //define dependencies
         var employeeFactory = {}
             ,BASE_URL = "http://localhost:5984/other/"
-            // ,couchdb = "http://localhost:5984/other/_all_docs?include_docs=true"
+            ,URL_FOR_DELETE = "23f49f6707c1d620331cea6c540018e6?2-a19f8a01339627875531891a673d520f="
+            //"23f49f6707c1d620331cea6c540018e6?include_docs=true"
             ,getEmployeeInfo
             ,addEmployeeInfo
             ,putEmployeeInfo
@@ -37,13 +38,15 @@ angular.module('employeeApp')
                 });
             }
 
-            deleteEmployeeInfo = function (){
-                return $http.delete(BASE_URL + "424d51bf9bc04cdef6e6264c6c00448b")
-                    .success(function(response, status, headers, config){console.log("YEAH!")
-                    })
-                    .error(function(error, status, headers, config){
-                    });
-                }
+        deleteEmployeeInfo = function (employee){
+            record = {};
+            record = employee; console.log (record);
+            return $http.delete(BASE_URL + URL_FOR_DELETE)
+                .success(function(response, status, headers, config){console.log("YEAH!")
+                })
+                .error(function(error, status, headers, config){
+                });
+            }
 
         // Assign defined methods to employeeFactory object
         employeeFactory.getEmployeeInfo = getEmployeeInfo;

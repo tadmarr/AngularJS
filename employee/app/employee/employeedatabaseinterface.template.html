@@ -24,7 +24,7 @@
 <section>
     <button class="btn btn-success" ng-click="addEmployeeInfo(employee)">ADD</button> <!-- ng-disabled="!employeeForm.$valid"-->
     <button class="btn btn-info" ng-click="editEmployeeInfo(employee)">EDIT</button>
-    <button class="btn btn-danger" ng-click="deleteEmployeeInfo()">DELETE</button>
+    <button class="btn btn-danger" ng-click="deleteEmployeeInfo(employee)">DELETE</button>
 
     <!-- Validation message -->
     <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
@@ -33,11 +33,11 @@
 
 <!-- Container for the form -->
 <article class="form">
-<form class="form-virtical" role="form" name="employeeForm" novalidate>
+<form class="form-virtical" name="employeeForm" novalidate>
 
         <section class="form-group"><hr>
             <header>Employee Information</header>
-            <label>Employee Number</label>
+            <label>Employee Number: {{employee.number}}</label>
             <input type="number" ng-model="employee.number"/><br>
             <div>
                 <div class="col-sm-3">

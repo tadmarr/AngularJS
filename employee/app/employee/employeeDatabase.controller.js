@@ -8,7 +8,8 @@
         $scope.selectEmployee = selectEmployee;
         $scope.addEmployeeInfo = addEmployeeInfo;
         $scope.editEmployeeInfo = editEmployeeInfo;
-        
+        $scope.deleteEmployeeInfo = deleteEmployeeInfo;
+
 
         function selectEmployee(employee){
             $scope.employee = employee.value;
@@ -35,12 +36,12 @@
                 $scope.employees = response.data.rows;
 
               // Selected employee true/false toggle
-              //    $scope.selectedEmployee = {};
-              //    $scope.selectEmployee = function(employee){
-              //        $scope.selectedEmployee = employee;
-              //        employee.isSelected=!employee.isSelected;
-              //         console.log(employee.isSelected);
-              //    }
+                //  $scope.selectedEmployee = {};
+                //  $scope.selectEmployee = function(employee){
+                //      $scope.selectedEmployee = employee;
+                //      employee.isSelected=!employee.isSelected;
+                //       console.log(employee.isSelected);
+                //  }
 
           });
         }
@@ -74,7 +75,7 @@
             if(isValid){
                 console.log('Im valid')
             }
-            // Request the factory to add an employee object
+            // @addEmployeeInfo: Request the factory to add an employee object
             employeeFactory.addEmployeeInfo(employee).then(function(response){
 
                 // A successful event!
@@ -91,7 +92,32 @@
 
             })
        };
+       // @deleteEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
+       function deleteEmployeeInfo(employee) {
 
+           // Call our local validate function to check the schema of an employee
+          //  var isValid = validate(employee);
+           //
+          //  if(isValid){
+          //      console.log('delete valid')
+          //  }
+           // Request the factory to add an employee object
+           employeeFactory.deleteEmployeeInfo(employee).then(function(response){
+
+               // A successful event!
+               console.log(response);
+               getEmployeeInfo();
+
+
+           }).catch(function(error){
+
+               // Oops something went wrong.
+
+               // Print the error
+               console.log(error);
+
+           })
+      };
     //    Form Validation
     //    $scope.validateFirstName = function(firstname) {
     //        if (firstname.length < 3 || firstname.length > 15){
