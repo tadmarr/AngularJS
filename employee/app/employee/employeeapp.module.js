@@ -1,3 +1,3 @@
 (function(){
-angular.module('employeeApp',[]);
+angular.module('employeeApp',['ngRoute']);
 })();

@@ -1,0 +1,46 @@
+<!-- Container for the form -->
+<article class="form">
+    <form class="form-virtical" name="employeeForm" novalidate>
+
+        <section class="form-group"><hr>
+            <header>Employee Information</header>
+            <label>Employee Number: {{employee._id| limitTo : 9 : 23}}</label>
+            <!-- <input type="number" ng-model="employee.number"/><br> -->
+            <div>
+                <div class="col-sm-3">
+                    <label>First Name<span class="required-asterix">*</span></label>
+                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.firstname" pattern="\D*" required/><br>
+
+                    <!-- <input type="text" ng-model="employee.firstname" ng-change="validateFirstName(employee.firstname)"/><br>
+                        <p class="error-message" ng-if="firstNameIsInvalid">
+                            {{firstNameValidationMessage}}
+                        </p> -->
+
+                    <label>Last Name<span class="required-asterix">*</span></label>
+                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.lastname" pattern="\D*" required/><br>
+
+                    <label>Middle Name<span class="notrequired-asterix">*</span></label>
+                    <input class="form-control" type="text" ng-model="employee.middlename" maxlength=15 pattern="\D*"/><br>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <label>Age<span class="required-asterix">*</span></label>
+                    <input class="form-control" type="number" min=14 max=100 maxlength=3 minlength=2 ng-model="employee.age" pattern="\d*" required/><br>
+
+                    <label>Designation<span class="required-asterix">*</span></label>
+                       <select class="form-control" ng-model="employee.designation" required><br>
+                             <option value="Senior Manager">Senior Manager</option>
+                             <option value="Assistant Manager">Assistant Manager</option>
+                             <option value="Lead">Lead</option>
+                             <option value="Senior Consultant">Senior Consultant</option>
+                             <option value="Consultant">Consultant</option>
+                       </select><br>
+
+                    <label>Salary<span class="required-asterix">*</span></label>
+                    <input class="form-control" type="number" min=0 max=9999999999 ng-model="employee.salary" pattern="\d*" required/>
+                </div>
+            </div>
+        </section>
+    </form>
+</article>
