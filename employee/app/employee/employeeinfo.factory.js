@@ -1,11 +1,9 @@
 (function(){
 angular.module('employeeApp')
 .factory('employeeFactory', function($http) {
-        //define dependencies
+        // Define dependencies
         var employeeFactory = {}
             ,BASE_URL = "http://localhost:5984/employee_data_base/"
-            ,URL_FOR_DELETE = "729128739b34e541b055b506e5006f39?rev=3-19632e6bba6028a996f1e67b7d5b08aa"
-            // "23f49f6707c1d620331cea6c540018e6?2-a19f8a01339627875531891a673d520f="
             ,getEmployeeInfo
             ,addEmployeeInfo
             ,putEmployeeInfo
@@ -29,7 +27,7 @@ angular.module('employeeApp')
                 });
             }
 
-        editEmployeeInfo = function (employee){console.log(employee._id);
+        editEmployeeInfo = function (employee){
             return $http.put(BASE_URL + employee._id, employee)
                 .success(function(response, status, headers, config){
                 })
@@ -50,7 +48,7 @@ angular.module('employeeApp')
                         alert("Action cancelled");
                     });
                 }
-                else{ }
+                else{ alert("Nothing done!"); }
             }
         // Assign defined methods to employeeFactory object
         employeeFactory.getEmployeeInfo = getEmployeeInfo;

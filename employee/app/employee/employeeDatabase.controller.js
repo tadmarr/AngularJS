@@ -9,17 +9,17 @@
         $scope.addEmployeeInfo = addEmployeeInfo;
         $scope.editEmployeeInfo = editEmployeeInfo;
         $scope.deleteEmployeeInfo = deleteEmployeeInfo;
+        $scope.validator = validator;
 
-
+        // This function populates form with selected employee
         function selectEmployee(employee){
             $scope.employee = employee.value;
-            console.log(employee);
         }
 
-        // Trigger the constructore function
+        // Triggers the constructor function
         activate();
 
-        // Our constructor function
+        // The constructor function
         function activate(){
 
             // As the page builds, get our list of employees
@@ -47,24 +47,24 @@
         }
 
         // @validate: This function validates the schema of an employee object
-        function validate(employee){
-
-            var isValid = false;
-
-            if(!employeeForm.$valid){
-                $scope.formInvalidMessage = true;
-                isValid = false;
-            }else{
-                $scope.formInvalidMessage = false;
-                isValid = true;
-            }
-
-            if(employee.firstname.length < 3){
-                isValid= false;
-            }
-
-            return isValid;
-        };
+        // function validate(employee){
+        //
+        //     var isValid = false;
+        //
+        //     if(!employeeForm.$valid){
+        //         $scope.formInvalidMessage = true;
+        //         isValid = false;
+        //     }else{
+        //         $scope.formInvalidMessage = false;
+        //         isValid = true;
+        //     }
+        //
+        //     if(employee.firstname.length < 3){
+        //         isValid= false;
+        //     }
+        //
+        //     return isValid;
+        // };
 
         // @addEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
         function addEmployeeInfo(employee) {

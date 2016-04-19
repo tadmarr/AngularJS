@@ -25,7 +25,7 @@
     <button class="btn btn-success" ng-click="addEmployeeInfo(employee)">ADD</button> <!-- ng-disabled="!employeeForm.$valid"-->
     <button class="btn btn-info" ng-click="editEmployeeInfo(employee)">EDIT</button>
     <button class="btn btn-danger" ng-click="deleteEmployeeInfo(employee)">DELETE</button>
-
+    <button class="btn btn-primary-outline" ng-click="validator(employee)">VALIDATE TEST</button>
     <!-- Validation message -->
     <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
     <!-- <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span> -->
@@ -59,7 +59,7 @@
 
                 <div class="col-sm-4">
                     <label>Age<span class="required-asterix">*</span></label>
-                    <input class="form-control" type="text" min=14 max=70 maxlength=2 ng-model="employee.age" pattern="\d*" required/><br>
+                    <input class="form-control" type="number" min=14 max=100 maxlength=3 minlength=2 ng-model="employee.age" pattern="\d*" required/><br>
 
                     <label>Designation<span class="required-asterix">*</span></label>
                        <select class="form-control" ng-model="employee.designation" required><br>
