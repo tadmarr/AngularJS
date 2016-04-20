@@ -10,6 +10,11 @@
         $scope.editEmployeeInfo = editEmployeeInfo;
         $scope.deleteEmployeeInfo = deleteEmployeeInfo;
         $scope.validator = validator;
+        $scope.clear_employee = clear_employee;
+
+        function clear_employee(){
+            $scope.employee = {};
+        }
 
         // This function populates form with selected employee
         function selectEmployee(employee){
@@ -47,7 +52,7 @@
         }
 
         // @validate: This function validates the schema of an employee object
-        // function validate(employee){
+        function validate(employee){
         //
         //     var isValid = false;
         //
@@ -64,7 +69,7 @@
         //     }
         //
         //     return isValid;
-        // };
+        };
 
         // @addEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
         function addEmployeeInfo(employee) {
