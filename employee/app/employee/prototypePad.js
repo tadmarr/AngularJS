@@ -25,7 +25,7 @@ function validator(employee){
         }
     }
     if (last == true && first == true && middle == true && age == true  && salary == true) {
-         validated == true;
+         validated = true;
      }
 console.log("inside validator " + last + first + middle+ age+ salary+ validated);
     return validated;
