@@ -10,16 +10,18 @@
         $scope.editEmployeeInfo = editEmployeeInfo;
         $scope.deleteEmployeeInfo = deleteEmployeeInfo;
         $scope.validator = validator;
-        $scope.clear_employee = clear_employee;
+        $scope.clear_employee = function clear_employee(){
+                                    $scope.employee = {};
+                                };
+        $scope.refresh = function(){
+                                $route.reload();
+                            };
 
-        function clear_employee(){
-            $scope.employee = {};
-        }
 
         // This function populates form with selected employee
         function selectEmployee(employee){
             $scope.employee = employee.value;
-        }
+        };
 
         // Triggers the constructor function
         activate();
