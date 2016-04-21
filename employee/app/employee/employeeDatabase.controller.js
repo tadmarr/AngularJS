@@ -1,6 +1,6 @@
 (function(){
     angular.module('employeeApp')
-    .controller('employeeController', ['$scope','employeeFactory', function($scope, employeeFactory) {
+    .controller('employeeController', ['$scope','employeeFactory', '$route', function($scope, employeeFactory, $route) {
 
         // Define variable dependencies
         $scope.employee = {};
@@ -15,6 +15,7 @@
                                 };
         $scope.refresh = function(){
                                 $route.reload();
+                                console.log('refresh');
                             };
 
 
@@ -112,7 +113,6 @@
            employeeFactory.deleteEmployeeInfo(employee).then(function(response){
 
                // A successful event!
-               console.log(response);
                getEmployeeInfo();
 
 
