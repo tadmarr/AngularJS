@@ -6,10 +6,9 @@
         $scope.employee = {};
         $scope.formInvalidMessage = false;
         $scope.selectEmployee = selectEmployee;
-        $scope.addEmployeeInfo = addEmployeeInfo;
-        $scope.editEmployeeInfo = editEmployeeInfo;
         $scope.deleteEmployeeInfo = deleteEmployeeInfo;
         $scope.validator = validator;
+
         $scope.clear_employee = function clear_employee(){
                                     $scope.employee = {};
                                 };
@@ -74,41 +73,10 @@
         //     return isValid;
         };
 
-        // @addEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
-        function addEmployeeInfo(employee) {
 
-            // Call our local validate function to check the schema of an employee
-            var isValid = validate(employee);
-
-            if(isValid){
-                console.log('Im valid')
-            }
-            // @addEmployeeInfo: Request the factory to add an employee object
-            employeeFactory.addEmployeeInfo(employee).then(function(response){
-
-                // A successful event!
-                console.log(response);
-                getEmployeeInfo();
-
-
-            }).catch(function(error){
-
-                // Oops something went wrong.
-
-                // Print the error
-                console.log(error);
-
-            })
-       };
        // @deleteEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
        function deleteEmployeeInfo(employee) {
 
-           // Call our local validate function to check the schema of an employee
-          //  var isValid = validate(employee);
-           //
-          //  if(isValid){
-          //      console.log('delete valid')
-          //  }
            // Request the factory to add an employee object
            employeeFactory.deleteEmployeeInfo(employee).then(function(response){
 
@@ -116,10 +84,7 @@
                console.log(response);
                getEmployeeInfo();
 
-
            }).catch(function(error){
-
-               // Oops something went wrong.
 
                // Print the error
                console.log(error);
