@@ -22,10 +22,10 @@
 
 <!-- @Buttons: ADD, EDIT, DELETE -->
 <section class>
-    <a class="btn btn-success" href="#add_employee">ADD</a><!-- ng-disabled="!employeeForm.$valid"-->
+    <a class="btn btn-success" href="#add_employee" ng-click="clear_employee()">ADD</a><!-- ng-disabled="!employeeForm.$valid"-->
     <a class="btn btn-warning" href="#edit_employee">EDIT</a>
     <button class="btn btn-danger" ng-click="deleteEmployeeInfo(employee)">DELETE</button>
-    <button class="btn btn-primary-outline" ng-click="validator(employee)">VALIDATE TEST</button>
+    <button class="btn btn-primary-outline" ng-click="refresh()">TEST BUTTON</button>
 
     <!-- Validation messages -->
     <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
