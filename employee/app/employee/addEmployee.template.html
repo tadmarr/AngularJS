@@ -1,10 +1,11 @@
 <!-- Container for the form -->
-<article class="form">
-    <button class="btn btn-info" ng-click="editEmployeeInfo(employee)">EDIT</button>
+<article class="form add_employee">
+    <a href="/"><button class="btn btn-success" ng-click="addEmployeeInfo(employee);clear_employee();go('/');">ADD</button></a>
     <form class="form-virtical" name="employeeForm" novalidate>
         <section class="form-group"><hr>
-                <header>Edit the employee information</header>
-                <section class="col-sm-3">
+            <div>
+                <header>Enter the employee information</header>
+                <div class="col-sm-3">
                     <label>First Name<span class="required-asterix">*</span></label>
                     <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.firstname" pattern="\D*" required/><br>
 
@@ -13,9 +14,9 @@
 
                     <label>Middle Name<span class="notrequired-asterix">*</span></label>
                     <input class="form-control" type="text" ng-model="employee.middlename" maxlength=15 pattern="\D*"/><br>
-                </section>
+                </div>
 
-                <section class="col-sm-4">
+                <div class="col-sm-4">
                     <label>Age<span class="required-asterix">*</span></label>
                     <input class="form-control" type="number" min=14 max=100 maxlength=3 minlength=2 ng-model="employee.age" pattern="\d*" required/><br>
 
@@ -30,7 +31,8 @@
 
                     <label>Salary<span class="required-asterix">*</span></label>
                     <input class="form-control" type="number" min=0 max=9999999999 ng-model="employee.salary" pattern="\d*" required/>
-                </section>
+                </div>
+            </div>
         </section>
     </form>
 </article>
