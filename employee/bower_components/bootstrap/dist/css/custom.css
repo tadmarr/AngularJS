@@ -60,6 +60,9 @@ caption {
     color: white;
     background-color: #00f;
 }
+.mysubmit {
+    rgba(251, 93, 5, 0.87)
+}
 /*
 tr td .isSelected {
     color: black;
