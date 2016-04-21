@@ -76,3 +76,9 @@ console.log("inside validator " + last + first + middle+ age+ salary+ validated)
 //        }
 //     }
 // }
+//locationProvider.hashPrefix('!')
+// $locationProvider.html5Mode({
+//     enabled: true,
+//     requireBase: true,
+//     rewriteLinks: true
+// });
