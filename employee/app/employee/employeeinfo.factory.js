@@ -50,6 +50,7 @@ angular.module('employeeApp')
                 }
                 else{ alert("Nothing done!"); }
             }
+            
         // Assign defined methods to employeeFactory object
         employeeFactory.getEmployeeInfo = getEmployeeInfo;
         employeeFactory.addEmployeeInfo = addEmployeeInfo;
