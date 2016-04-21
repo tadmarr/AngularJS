@@ -1,9 +1,10 @@
 <!-- Container for the form -->
 <article class="form edit_employee">
-    <a href="/"><button class="btn btn-info" ng-click="editEmployeeInfo(employee)">EDIT</button></a>
+    <a href="/"><button class="btn btn-info" ng-click="editEmployeeInfo(employee);clear_employee();">SUBMIT</button></a>
+    <a href="/" class="btn btn-info">CANCEL<a>
     <form class="form-virtical" name="employeeForm" novalidate>
         <section class="form-group"><hr>
-                <header>Edit the employee information</header>
+                <h4>Edit the employee information</h4>
                 <section class="col-sm-3">
                     <label>First Name<span class="required-asterix">*</span></label>
                     <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.firstname" pattern="\D*" required/><br>

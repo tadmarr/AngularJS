@@ -113,6 +113,7 @@
            employeeFactory.deleteEmployeeInfo(employee).then(function(response){
 
                // A successful event!
+               console.log(response);
                getEmployeeInfo();
 
 
