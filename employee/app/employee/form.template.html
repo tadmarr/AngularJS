@@ -1,24 +1,24 @@
 <!-- Container for the form -->
 <article class="employee-form">
-    <a href="/"><button class="btn btn-success-outline" ng-click="editEmployeeInfo(employee);clear_employee();">SUBMIT</button></a>
-    <a href="/" class="btn btn-primary">CANCEL</a>
+    <a href="/" class="btn btn-success-outline" ng-click="submitEmployeeInfo()">SUBMIT</a>
+    <a href="/" class="btn btn-primary" ng-click="clear_form()">CANCEL</a>
     <form class="form-virtical" name="employeeForm" novalidate>
         <section class="form-group"><hr>
                 <h4><span>{{message}}</span> employee information</h4>
                 <section class="col-sm-3">
                     <label>First Name<span class="required-asterix">*</span></label>
-                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.firstname" ng-pattern="[\D*]" required/><br>
+                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.firstname" required/><br>
 
                     <label>Last Name<span class="required-asterix">*</span></label>
-                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.lastname" ng-pattern="[\D*]" required/><br>
+                    <input class="form-control" type="text" minlength=3 maxlength=15 ng-model="employee.lastname" required/><br>
 
                     <label>Middle Name<span class="notrequired-asterix">*</span></label>
-                    <input class="form-control" type="text" ng-model="employee.middlename" maxlength=15 ng-pattern="[\D*]"><br>
+                    <input class="form-control" type="text" ng-model="employee.middlename" maxlength=15><br>
                 </section>
 
-                <section class="col-sm-4">
+                <section class="col-sm-3">
                     <label>Age<span class="required-asterix">*</span></label>
-                    <input class="form-control" type="number" min=14 max=100 maxlength=3 minlength=2 ng-model="employee.age" ng-pattern="[\d*]" required/><br>
+                    <input class="form-control" type="number" min=14 max=100 ng-model="employee.age" required/><br>
 
                     <label>Designation<span class="required-asterix">*</span></label>
                        <select class="form-control" ng-model="employee.designation" required><br>
@@ -30,7 +30,7 @@
                        </select><br>
 
                     <label>Salary<span class="required-asterix">*</span></label>
-                    <input class="form-control" type="number" min=0 max=9999999999 ng-pattern="[\d+]" ng-model="employee.salary" required/>
+                    <input class="form-control" type="number" min=0 max=9999999999  ng-model="employee.salary" required/>
                 </section>
         </section>
     </form>
