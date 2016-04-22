@@ -11,11 +11,11 @@
               </tr>
               <tr class="table-hover" ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
                ng-click="selectEmployee(employee)" ng-repeat="employee in employees | limitTo: 10">
-                <td>{{employee.value._id|limitTo: 9: 24 }}</td>
+                <td>{{employee.value._id | limitTo: 9: 24 }}</td>
                 <td>{{employee.value.lastname | uppercase}}, {{employee.value.firstname | uppercase}} {{employee.value.middlename | uppercase}}</td>
                 <td>{{employee.value.age | number}}</td>
                 <td>{{employee.value.designation}}</td>
-                <td>{{employee.value.salary | currency}}</td>
+                <td style="text-align:right;">{{employee.value.salary | currency}}</td>
               </tr>
         </table>
     </main>
@@ -32,7 +32,7 @@
     <!-- <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span> -->
 </section>
 
-<section>
+<section class="forms">
     <!-- view for add_employee and edit_employee routes -->
     <section ng-view></section>
 </section>
