@@ -60,10 +60,10 @@ caption {
     color: white;
     background-color: #00f;
 }
-.mysubmit {
-    rgba(251, 93, 5, 0.87)
-}
 /*
+.mysubmit {
+background-color: rgba(251, 93, 5, 0.87);
+}
 transition: [property] [duration] [timing-function] [delay];
 transition: visibility 2s ease-in 0s;
 transition: visibility 2s ease-out 2s;
