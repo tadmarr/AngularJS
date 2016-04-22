@@ -3,7 +3,7 @@ angular.module('employeeApp')
     .factory('employeeFactory', function($http) {
             // Define dependencies
             var employeeFactory = {}
-                ,BASE_URL = "http://localhost:5984/employee_data_base/"
+                ,BASE_URL = "http://localhost:5984/employee_database/"
                 ,getEmployeeInfo
                 ,addEmployeeInfo
                 ,putEmployeeInfo
@@ -42,7 +42,7 @@ angular.module('employeeApp')
 
                     return $http.delete(BASE_URL + employee._id + "?rev=" + employee._rev)
                         .success(function(response, status, headers, config){
-                            alert("Information deleted");
+                            // alert("Information deleted");
                         })
                         .error(function(error, status, headers, config){
                             alert("Action cancelled");
