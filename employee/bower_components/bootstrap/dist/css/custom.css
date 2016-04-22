@@ -67,7 +67,8 @@ caption {
 transition: [property] [duration] [timing-function] [delay];
 transition: visibility 2s ease-in 0s;
 transition: visibility 2s ease-out 2s;
-
+opacity
+ease-in-out
 tr td .isSelected {
     color: black;
     background-color: red;
