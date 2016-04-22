@@ -4,12 +4,13 @@
 
         // Define variable dependencies
         $scope.employee = {};
+        $scope.selectedEmployee = {};
         $scope.formInvalidMessage = false;
         $scope.selectEmployee = selectEmployee;
         $scope.deleteEmployeeInfo = deleteEmployeeInfo;
         $scope.validator = validator;
 
-        $scope.clear_employee = function clear_employee(){
+        $scope.clear_form = function clear_employee(){
                                     $scope.employee = {};
                                 };
         $scope.refresh = function(){
@@ -23,6 +24,12 @@
             $scope.employee = employee.value;
         };
 
+        // Selected employee true/false toggle
+        $scope.selectEmployee = function(employee){
+            $scope.selectedEmployee = employee;
+            employee.isSelected=!employee.isSelected;
+            console.log(employee.isSelected);
+        }
         // Triggers the constructor function
         activate();
 
@@ -33,7 +40,7 @@
             getEmployeeInfo();
         }
 
-        // @getEmployeeInfo : Gets a list of employees from CouchDb using our EmployeeFactory
+        // @getEmployeeInfo : Gets a list of employees from CouchDb using service, EmployeeFactory
         function getEmployeeInfo(){
 
             // Calling the factory method for it get the list of employees
@@ -42,16 +49,9 @@
                 // Assiging the list of employees to the scope variable that binds to our table
                 $scope.employees = response.data.rows;
 
-              // Selected employee true/false toggle
-                //  $scope.selectedEmployee = {};
-                //  $scope.selectEmployee = function(employee){
-                //      $scope.selectedEmployee = employee;
-                //      employee.isSelected=!employee.isSelected;
-                //       console.log(employee.isSelected);
-                //  }
-
           });
         }
+
 
         // @validate: This function validates the schema of an employee object
         function validate(employee){
@@ -73,6 +73,30 @@
         //     return isValid;
         };
 
+        // @addEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
+        function addEmployeeInfo(employee) {
+
+            // Call our local validate function to check the schema of an employee
+            // var isValid = validate(employee);
+            //
+            // if(isValid){
+            //     console.log('Im valid')
+            // }
+            // @addEmployeeInfo: Request the factory to add an employee object
+            employeeFactory.addEmployeeInfo(employee).then(function(response){
+
+                // A successful event!
+                console.log(response);
+                getEmployeeInfo();
+
+
+            }).catch(function(error){
+
+                // Print the error
+                console.log(error);
+
+            })
+        };
 
        // @deleteEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
        function deleteEmployeeInfo(employee) {
@@ -93,22 +117,21 @@
       };
 
 
-
-    //    Form Validation
-    //    $scope.validateFirstName = function(firstname) {
-    //        if (firstname.length < 3 || firstname.length > 15){
-    //            $scope.firstNameIsInvalid = true;
-    //            $scope.firstNameValidationMessage = 'Please enter a valid name';
-    //        }
-    //        else{
-    //            $scope.firstNameIsInvalid = false;
-    //            $scope.firstNameValidationMessage = '';
-    //        }
-    //          console.log(firstname);
-    //
-    //
-    //     };
-
      }]);
 
 })();
+
+//    Form Validation
+//    $scope.validateFirstName = function(firstname) {
+//        if (firstname.length < 3 || firstname.length > 15){
+//            $scope.firstNameIsInvalid = true;
+//            $scope.firstNameValidationMessage = 'Please enter a valid name';
+//        }
+//        else{
+//            $scope.firstNameIsInvalid = false;
+//            $scope.firstNameValidationMessage = '';
+//        }
+//          console.log(firstname);
+//
+//
+//     };
