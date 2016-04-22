@@ -60,10 +60,11 @@ caption {
     color: white;
     background-color: #00f;
 }
-/*
-.mysubmit {
-background-color: rgba(251, 93, 5, 0.87);
+.employee-submit {
+    background-color: rgba(251, 93, 5, 0.87);
+    color: white;
 }
+/*
 transition: [property] [duration] [timing-function] [delay];
 transition: visibility 2s ease-in 0s;
 transition: visibility 2s ease-out 2s;
