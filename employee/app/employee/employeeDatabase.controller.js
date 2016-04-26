@@ -15,10 +15,10 @@
         $scope.clear_form = function clear_employee(){
                                     $scope.employee = {};
                                 };
-        $scope.refresh = function(){
-                                $route.reload();
-                                console.log('refresh');
-                            };
+        // $scope.refresh = function(){
+        //                         $route.reload();
+        //                         console.log('refresh');
+        //                     };
 
 
         // This function populates form with selected employee
@@ -75,7 +75,7 @@
         //     return isValid;
         };
 
-        
+
        // @deleteEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
        function deleteEmployeeInfo(employee) {
 
