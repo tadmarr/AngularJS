@@ -1,0 +1,13 @@
+git push --set-upstream [url]
+
+git diff
+git add .
+git commit -m ""
+git push
+
+
+git remote add <name> <url>
+git push <name>
+git log --oneline --graph --decorate
+git pull origin master
+git push origin master

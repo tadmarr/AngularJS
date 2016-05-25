@@ -1,3 +1,0 @@
-(function(){
-  angular.module("savvyApp",[]);
-})();
