@@ -1,0 +1,38 @@
+    <!-- Table showing database -->
+    <main class="table-responsive">
+        <table class="table" border="1">
+            <caption><h4>Employee Database Management</h4></caption>
+              <tr id="table-headers">
+                <th>No.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Position</th>
+                <th>Salary</th>
+              </tr>
+              <tr class="table-hover" ng-class="{'selectEmployee':employee.isSelected,'':!employee.isSelected}"
+               ng-click="selectEmployee(employee)" ng-repeat="employee in employees | limitTo: 10">
+                <td>{{employee.value._id | limitTo: 9: 24 }}</td>
+                <td>{{employee.value.lastname | uppercase}}, {{employee.value.firstname | uppercase}} {{employee.value.middlename | uppercase}}</td>
+                <td>{{employee.value.age | number}}</td>
+                <td>{{employee.value.designation}}</td>
+                <td style="text-align:right;">{{employee.value.salary | currency}}</td>
+              </tr>
+        </table>
+    </main>
+
+<!-- @Buttons: ADD, EDIT, DELETE -->
+<section class="buttons">
+    <a class="btn btn-success" href="#add_employee" ng-click="clear_form()">ADD</a><!-- ng-disabled="!employeeForm.$valid"-->
+    <a class="btn btn-warning" href="#edit_employee">EDIT</a>
+    <button class="btn btn-danger" ng-click="deleteEmployeeInfo(employee)">DELETE</button>
+    <span><strong>Total Employees: {{employees.length}}</strong></span>
+    
+    <!-- <button class="btn btn-primary-outline" ng-click="createDataBase()">TEST BUTTON</button> -->
+
+    <!-- Validation messages -->
+    <!-- <span class=inValid-message ng-if="formInvalidMessage"><strong>Please complete all required fields.</strong></span> -->
+    <!-- <span class=isValid-message ng-if="employeeForm.$valid"><strong>Ready to submit!</strong></span> -->
+</section>
+
+    <!-- view for add_employee and edit_employee routes -->
+    <section class="forms" ng-view></section>
