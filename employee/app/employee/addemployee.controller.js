@@ -20,7 +20,6 @@ angular.module('employeeApp')
                 console.log(response);
                 getEmployeeInfo();
 
-
             }).catch(function(error){
 
                 // Print the error
