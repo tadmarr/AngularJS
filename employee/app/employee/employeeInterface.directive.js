@@ -3,7 +3,7 @@
     .directive('employeeInterface', function(employeeFactory){
         return{
             restrict: 'E',
-            templateUrl:'app/employee/employeeDatabaseInterface.template.html',
+            templateUrl:'app/employee/employeeInterface.template.html',
             controller: 'employeeController',
             controllerAs: 'employeeCtrl'
         };
