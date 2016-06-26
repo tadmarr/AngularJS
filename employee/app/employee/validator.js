@@ -27,36 +27,11 @@ function validator(employee){
     if (last == true && first == true && middle == true && age == true  && salary == true) {
          result = true;
      }
-console.log("inside validator " + last + first + middle+ age+ salary+ validated);
+console.log("inside validator " + last + first + middle+ age + salary + result);
     return result;
 };
 
 
-
-
-
-
-
-
-
-
-
-// (function(){
-//     angular.module('employeeApp')
-//       .controller('tableController', function($scope, employeeFactory) {
-//           employeeFactory.getEmployeeInfo().then(function(response){
-//               $scope.employeeInfo = response.data;
-//
-//             //  $scope.selectedEmployee = {};
-//             //  $scope.selectEmployee = function(employee){
-//             //      $scope.selectedEmployee = employee;
-//             //      employee.isSelected=!employee.isSelected;
-//             //       console.log(employee.isSelected);
-//             //  }
-//
-//           });
-//      });
-// })();
 
 // Example of views in CouchDb
 // {
@@ -76,9 +51,3 @@ console.log("inside validator " + last + first + middle+ age+ salary+ validated)
 //        }
 //     }
 // }
-//locationProvider.hashPrefix('!')
-// $locationProvider.html5Mode({
-//     enabled: true,
-//     requireBase: true,
-//     rewriteLinks: true
-// });
