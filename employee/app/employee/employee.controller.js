@@ -15,11 +15,6 @@
         $scope.clear_form = function clear_employee(){
                                     $scope.employee = {};
                                 };
-        // $scope.refresh = function(){
-        //                         $route.reload();
-        //                         console.log('refresh');
-        //                     };
-
 
         // This function populates form with selected employee
         function selectEmployee(employee){
@@ -76,12 +71,13 @@
         };
 
 
-       // @deleteEmployeeInfo: This function will request our factory to DELETE an employee object to CouchDB
+       // @deleteEmployeeInfo: This function will request our factory to DELETE an employee object from CouchDB
        function deleteEmployeeInfo(employee) {
 
            // Request the factory to delete an employee object
            employeeFactory.deleteEmployeeInfo(employee).then(function(response){
 
+         employeeFactory.deleteEmployeeInfo(employee).then(function(response){
                // A successful event!
                console.log(response);
                getEmployeeInfo();
@@ -92,6 +88,7 @@
                console.log(error);
 
            })
+
       };
 
 
@@ -110,6 +107,5 @@
 //            $scope.firstNameValidationMessage = '';
 //        }
 //          console.log(firstname);
-//
 //
 //     };
