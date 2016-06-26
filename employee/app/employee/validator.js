@@ -1,5 +1,5 @@
 function validator(employee){
-    var last = first = middle = age = designation = salary = validated = new Boolean(false);
+    var last = first = middle = age = designation = salary = result = new Boolean(false);
     // lastname validation *need to exclude symbols
     if (employee.lastname.length >= 3 && employee.lastname.length <= 15 && isNaN(employee.lastname) == true ){
         last = true;
@@ -25,10 +25,10 @@ function validator(employee){
         }
     }
     if (last == true && first == true && middle == true && age == true  && salary == true) {
-         validated = true;
+         result = true;
      }
 console.log("inside validator " + last + first + middle+ age+ salary+ validated);
-    return validated;
+    return result;
 };
 
 
