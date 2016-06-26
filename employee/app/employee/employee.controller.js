@@ -75,7 +75,6 @@
        function deleteEmployeeInfo(employee) {
 
            // Request the factory to delete an employee object
-           employeeFactory.deleteEmployeeInfo(employee).then(function(response){
 
          employeeFactory.deleteEmployeeInfo(employee).then(function(response){
                // A successful event!
