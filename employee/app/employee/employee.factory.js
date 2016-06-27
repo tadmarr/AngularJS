@@ -11,7 +11,7 @@ angular.module('employeeApp')
 
             // Define CRUD methods
             getEmployeeInfo = function (){
-                return $http.get(BASE_URL + "_design/other/_view/other")
+                return $http.get(BASE_URL + "_design/chronological/_view/chronological")
                     .success(function(response, status, headers, config){
                     })
                     .error(function(error, status, headers, config){
