@@ -1,10 +1,10 @@
 angular.module('employeeApp')
     .controller('editEmployeeController', ['$scope','employeeFactory', function($scope, employeeFactory){
 
-        $scope.submitEmployeeInfo;
+        $scope.submitEmployeeInfo= editEmployeeInfo;
         $scope.message = "Edit";
 
-        // @editEmployeeInfo: This function will request our factory to POST an employee object to CouchDB
+        // @editEmployeeInfo: This function will request our factory to put (edit) an employee object to CouchDB
         function editEmployeeInfo(employee) {
 
             // Call our local validate function to check the schema of an employee
