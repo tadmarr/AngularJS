@@ -30,24 +30,3 @@ function validator(employee){
 console.log("inside validator " + last + first + middle+ age + salary + result);
     return result;
 };
-
-
-
-// Example of views in CouchDb
-// {
-//    "_id": "_design/other",
-//    "_rev": "12-94030b7274895ea0b89118a26d81c6c8",
-//    "language": "javascript",
-//    "views": {
-//        "other": {
-//                "map": "function(doc) {\n  emit(null, doc);\n}"
-//            }
-//
-//             lastname:   function(doc) {
-//                if (employee.lastname && employee.number) {
-//                    emit(employee.lastName, {FirstName: employee.firstName, designation: employee.designation});
-//                }
-//
-//        }
-//     }
-// }
