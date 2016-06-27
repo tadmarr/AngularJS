@@ -8,7 +8,6 @@
         $scope.formInvalidMessage = false;
         $scope.selectEmployee = selectEmployee;
 
-
         $scope.deleteEmployeeInfo = deleteEmployeeInfo;
         $scope.validator = validator;
 
