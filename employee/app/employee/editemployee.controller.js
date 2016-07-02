@@ -18,7 +18,7 @@ angular.module('employeeApp')
 
                 // A successful event!
                 console.log(response);
-                getEmployeeInfo();
+                employeeFactory.getEmployeeInfo();
 
 
             }).catch(function(error){
